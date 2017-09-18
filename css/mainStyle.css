@@ -1,1 +1,71 @@
 /* General */
+* {
+	font-family: Calibri;
+}
+
+body {
+	background-color: rgb(242, 242, 242);
+}
+
+/* Tool Bar */
+.toolBar {
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    top: 0;
+}
+
+.toolBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.toolBar ul li {
+    /*border-right: 1px solid white;*/
+    color: white;
+    float: left;
+    padding: 10px;
+    width: 25%;
+    text-align: center;
+    min-width: 120px;
+    border: 1px solid black;
+}
+
+.toolBar ul li:hover {
+    background-color: white;
+    color: black;
+}
+
+.toolBar ul a {
+    text-decoration: none;
+}
+
+.toolBar_otherSpacer {
+    margin-top: 50px;
+}
+
+/* Main Contents */
+.main_LeftPanel {
+    /* background-color: red; */
+
+    width: 50%;
+    float: left;
+    /* padding-left: 20px; */
+}
+
+.main_RightPanel {
+    /* background-color: yellow; */
+
+    width: 50%;
+    float: right;
+    /* padding-left: 20px; */
+}
+
+.main_Header {
+    background-color: black;
+    color: white;
+    border-radius: 4px;
+    padding-left: 10px;
+    padding-bottom: 5px;
+}
