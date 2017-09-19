@@ -51,6 +51,7 @@
             <li><p>Copyright under MIT License to Brody.MC Media and all personal aliases.</p></li>
             <li><a href="LICENSE" title="Your work will not be saved."><p>View License.</p></a></li>
             <li><a href="credits.php" title="Your work will not be saved."><p>View Credits.</p></a></li>
+            <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
         </ul>
     </div>  -->
 </body>
