@@ -173,6 +173,7 @@ body {
     margin-bottom: 2px;
     padding: 5px;
     border: 1px solid black;
+    border-radius: 4px;
     position: relative;
 }
 
@@ -208,6 +209,30 @@ body {
 
 .main_ImageContainer {
     position: relative;
+}
+
+.main_CancelButton {
+    width: 100%;
+    background-color: transparent;
+    color: white;
+    border: none;
+    font-weight: normal;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main_CancelButton:hover {
+    outline: 0;
+    cursor: pointer;
+    color: black;
+}
+
+.main_Cancel_ListItem {
+    background-color: black;
+}
+
+.main_Cancel_ListItem:hover {
+    background-color: white;
 }
 
 .main_SelectorButton {

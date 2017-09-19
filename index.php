@@ -32,15 +32,18 @@
             <h1 class="main_Header">Select Location</h1>
             <div class="main_ImageContainer">
                 <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
             </div>
         </div>
 
         <!-- Right Panel | Item Choice -->
         <div class="main_RightPanel">
-            <h1 class="main_Header">Select Equipment</h1>
+            <h1 class="main_Header" id="selectSlotTitle">Select a Slot</h1>
             <ul class="main_List" id="equipmentList">
                 <!-- Populated by Script -->
+                <li>
+                    <p class="main_List_Header">No slot selected. Select one on the left.</p>
+                </li>
             </ul>
         </div>
     </div>
@@ -61,29 +64,38 @@
 
     // Opens the selection menu for the correct item
     function openSelectionMenu(sender) {
-        console.log(sender);
+        // console.log(sender);
+
+        // Clean List
+        $("#equipmentList").empty();
+        $("#selectSlotTitle").text("Select a "+sender.id);
         
         // Get Data
-        $.get("actions/getEquipmentData.php", function(data, status){
+        $.get("actions/getEquipmentData.php?file=equipmentData", function(data, status){
             if(status === "success") {
                 // Populate Main List
+                var allItems = JSON.parse(data).item
 
-                // Build HTML
-                var html = '<li>';
-                html += '<p class="main_List_Header">NAME | $00.00</p>';
-                html += '<p>DESCRIPTION</p>';
-                html += '<button type="button" class="main_List_Button" onclick="swapData(BTN_NODE,ITEM);">Select</button>';
-                html += '</li>';
+                // Create Back button
+                $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="cancelEquipmentSelection();">Cancel Selection</button></li>');
 
-                // Send it out
-                $("#equipmentList").append(html);
+                // Create HTML options
+                for(item of allItems) {
+                    // Only load correct type
+                    if(item.type == sender.id) {
+                        // Build HTML
+                        var html = '<li>';
+                        html += '<p class="main_List_Header">'+item.name+' | $'+item.price+'</p>';
+                        html += '<p>'+item.desc+'</p>';
+                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\',\''+item.name+'_'+item.type+'\');">Select</button>';
+                        html += '</li>';
 
-                // Wait for Selection
+                        // Send it out
+                        $("#equipmentList").append(html);
+                    }
+                }
             }
         });
-
-        
-        $("#"+sender.id).attr("data-tooltip","SET TO NEW VALUE");
     }
 
     // Adds selected item to Equipment array, removes old items, and sets tool tip of button
@@ -91,10 +103,23 @@
         // Remove old Equipment if exists
 
         // Add to Equipment
+        equipment.push(item);
 
         // Set tool tip
+        $("#"+node).attr("data-tooltip","SET TO NEW VALUE");
 
-        // Clear #equipmentList
+        // Clear List
+        cancelEquipmentSelection();
+    }
+
+    // Clears the equipment list of items without selecting anything
+    function cancelEquipmentSelection() {
+        // Clean list
+        $("#equipmentList").empty();
+        $("#selectSlotTitle").text("Select a Slot");
+
+        // Insert placeholder
+        $("#equipmentList").append('<li><p class="main_List_Header">No slot selected.</p></li>');
     }
 
     // Switches between the various toolbar menus.

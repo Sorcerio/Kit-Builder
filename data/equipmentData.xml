@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!-- Data for: Equipment -->
+<!--
+Name        = Name of the Equipment
+Price       = Price in '00.00' format with no '$'
+Store       = Name of the store that it comes from (Evike, Airsoft Megastore, 5.11 Tactical, etc)
+Desc        = Description of the item in question (limit of 128)
+Type        = Type of equipment (Gun, Mask, Goggle, Boot, etc)
+Web Link    = Web address of the item
+
+Example XML:
+<item>
+    <name>NAME</name>
+    <price>0000</price>
+    <store>STORENAME</store>
+    <desc>DESCRIPTION</desc>
+    <type>TYPE</type>
+    <link>WEBLINK</link>
+</item>
+-->
+
+<equipment>
+    <!-- General Equipment -->
+    <item>
+        <name>NAME</name>
+        <price>0000</price>
+        <store>STORENAME</store>
+        <desc>DESCRIPTION</desc>
+        <type>TYPE</type>
+        <link>WEBLINK</link>
+    </item>
+
+    <item>
+        <name>Suicide Vest</name>
+        <price>10.00</price>
+        <store>Backyard</store>
+        <desc>It's a god damn Suicide Vest. Use it.</desc>
+        <type>Vest</type>
+        <link>www.fuckyou.com</link>
+    </item>
+
+    <item>
+        <name>Another Vest</name>
+        <price>10,000.00</price>
+        <store>Backyard</store>
+        <desc>It's a god damn Vest. Use it.</desc>
+        <type>Vest</type>
+        <link>www.fuckyou.com</link>
+    </item>
+
+    <!-- Primary Weapon -->
+
+    <!-- Secondary Weapon -->
+</equipment>
