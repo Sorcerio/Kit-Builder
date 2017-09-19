@@ -61,6 +61,7 @@
 <script>
     // Kept Variables
     var equipment = [];
+    var totalPrice = "00.00";
 
     // Opens the selection menu for the correct item
     function openSelectionMenu(sender) {
@@ -74,7 +75,7 @@
         $.get("actions/getEquipmentData.php?file=equipmentData", function(data, status){
             if(status === "success") {
                 // Populate Main List
-                var allItems = JSON.parse(data).item
+                var allItems = JSON.parse(data).item;
 
                 // Create Back button
                 $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="cancelEquipmentSelection();">Cancel Selection</button></li>');
@@ -87,7 +88,7 @@
                         var html = '<li>';
                         html += '<p class="main_List_Header">'+item.name+' | $'+item.price+'</p>';
                         html += '<p>'+item.desc+'</p>';
-                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\',\''+item.name+'_'+item.type+'\');">Select</button>';
+                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\',\''+item.name+'\');">Select</button>';
                         html += '</li>';
 
                         // Send it out
@@ -101,15 +102,25 @@
     // Adds selected item to Equipment array, removes old items, and sets tool tip of button
     function swapData(node, item) {
         // Remove old Equipment if exists
+        for(part of equipment) {
+            if(part.includes(node)) {
+                var index = equipment.indexOf(part);
+                equipment.splice(index, 1);
+            }
+        }
 
         // Add to Equipment
-        equipment.push(item);
+        equipment.push(item+"_"+node);
 
         // Set tool tip
-        $("#"+node).attr("data-tooltip","SET TO NEW VALUE");
+        $("#"+node).attr("data-tooltip",item+" Selected");
+
+        // Add to Total
+        // <<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
         // Clear List
         cancelEquipmentSelection();
+        console.log(equipment);
     }
 
     // Clears the equipment list of items without selecting anything
