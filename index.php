@@ -28,13 +28,16 @@
     <div class="toolBar_otherSpacer">
         <!-- Left Panel | Spot Choice -->
         <div class="main_LeftPanel">
-            <h1 class="main_Header">Select Type</h1>
-            <img src="images/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
+            <h1 class="main_Header">Select Location</h1>
+            <div class="main_ImageContainer">
+                <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
+            </div>
         </div>
 
         <!-- Right Panel | Item Choice -->
         <div class="main_RightPanel">
-            <h1 class="main_Header">Select Choice</h1>
+            <h1 class="main_Header">Select Equipment</h1>
             <ul class="main_List">
                 <li>
                     <p class="main_List_Header">NAME | $00.00</p>
@@ -55,6 +58,10 @@
     </div>  -->
 </body>
 <script>
+    // Opens the selection menu for the correct item
+    function openSelectionMenu(sender) {
+        console.log(sender);
+    }
 
     // Switches between the various toolbar menus.
     // mode, String of Id of button selected
