@@ -62,7 +62,7 @@
     // Kept Variables
     var equipment = []; // Saved equipment selected by the user
     var allItems = []; // All items currently loaded at one time (Has every item loaded from the XML file)
-    var totalPrice = "00.00";
+    var totalPrice = "0.00";
 
     // Opens the selection menu for the correct item
     function openSelectionMenu(sender) {
@@ -80,6 +80,9 @@
 
                 // Create Back button
                 $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="cancelEquipmentSelection();">Cancel Selection</button></li>');
+
+                // Create Clear button
+                $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="clearEquipmentSelection(\''+sender.id+'\');">Clear Selection</button></li>');
 
                 // Create HTML options
                 var tick = 0;
@@ -106,8 +109,8 @@
 
     // Adds selected item to Equipment array, removes old items, and sets tool tip of button
     function swapData(node, itemId) {
-        console.log("Node: "+node);
-        console.log(allItems[itemId]);
+        // console.log("Node: "+node);
+        // console.log(allItems[itemId]);
 
         // Create item
         var item = allItems[itemId];
@@ -138,7 +141,7 @@
         // Clear List
         cancelEquipmentSelection();
 
-        console.log(equipment);
+        // console.log(equipment);
     }
 
     // Clears the equipment list of items without selecting anything
@@ -149,6 +152,29 @@
 
         // Insert placeholder
         $("#equipmentList").append('<li><p class="main_List_Header">No slot selected.</p></li>');
+    }
+
+    // Clears a slot completely and subtracts price of item
+    function clearEquipmentSelection(node) {
+        // Look through equipment
+        if(equipment.length != 0) {
+            for(part of equipment) {
+                if(part.type == node) {
+                    // Subtract previous from Total Price
+                    $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2));
+
+                    // Remove from equipment list
+                    var index = equipment.indexOf(part);
+                    equipment.splice(index, 1);
+
+                    // Reset node to empty
+                    $("#"+node).attr("data-tooltip", "No Selection");
+                }
+            }
+        }
+
+        // Exit equipment section
+        cancelEquipmentSelection();
     }
 
     // Switches between the various toolbar menus.

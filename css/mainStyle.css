@@ -244,6 +244,7 @@ body {
     width: 7%;
     height: 7%;
     padding: 1px;
+    font-size: 1vw;
     /* Location is set directly in the HTML since there's a lot */
 }
 
