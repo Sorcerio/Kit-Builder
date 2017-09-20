@@ -5,7 +5,7 @@ Name        = Name of the Equipment
 Price       = Price in '00.00' format with no '$' and no ','
 Store       = Name of the store that it comes from (Evike, Airsoft Megastore, 5.11 Tactical, etc)
 Desc        = Description of the item in question (limit of 128)
-Type        = Type of equipment (Gun, Mask, Goggle, Boot, etc)
+Type        = Type of equipment (Gun, Mask, Goggle, Boot, Knee Pad, etc)
 Web Link    = Web address of the item
 
 Example XML:

@@ -30,10 +30,9 @@
         <!-- Left Panel | Spot Choice -->
         <div class="main_LeftPanel">
             <h1 class="main_Header">Select Location</h1>
-            <div class="main_ImageContainer">
+            <div class="main_ImageContainer" id="mainNodeSelectionContainer">
                 <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
                 <!-- Buttons Start -->
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
                 <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
                 <div id="headMenuFull" style="display: none;"> 
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
@@ -41,6 +40,20 @@
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 41.5%; top: 19%;" data-tooltip="No Selection">GLASS</button>
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button>
                 </div>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Shirt" style="left: 65%; top: 30%;" data-tooltip="No Selection">SHIRT</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Belt" style="left: 52%; top: 60%;" data-tooltip="No Selection">BELT</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Glove" style="left: 66%; top: 58%;" data-tooltip="No Selection">GLOVE</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Pant" style="left: 32%; top: 65%;" data-tooltip="No Selection">PANT</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Knee Pad" style="left: 57%; top: 75%;" data-tooltip="No Selection">KNEE</button>
+
+                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Boot" style="left: 36%; top: 87%;" data-tooltip="No Selection">BOOT</button>
                 <!-- Buttons End -->
             </div>
         </div>
