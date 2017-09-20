@@ -48,6 +48,15 @@ Example XML:
         <link>www.fuckyou.com</link>
     </item>
 
+    <item>
+        <name>Goggles</name>
+        <price>10.00</price>
+        <store>Backyard</store>
+        <desc>You'll shoot your eye out.</desc>
+        <type>Goggle</type>
+        <link>www.fuckyou.com</link>
+    </item>
+
     <!-- Primary Weapon -->
 
     <!-- Secondary Weapon -->

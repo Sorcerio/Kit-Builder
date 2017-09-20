@@ -15,7 +15,7 @@
 <body>
     <!-- Tool Bar -->
     <div class="toolBar">
-        <h4 class="main_Header main_Header_Price">Total Price: $<span id="totalPriceDisplay">00.00</span></h4>
+        <h4 class="main_Header main_Header_Price">Total Price: $<span id="totalPriceDisplay">0.00</span></h4>
         <ul>
             <a href="javascript:switchToolbarSelector('equip_menu');"><li id="equip_menu">[ Equipment ]</li></a>
             <a href="javascript:switchToolbarSelector('primary_menu');"><li id="primary_menu">Primary Weapon</li></a>
@@ -32,7 +32,16 @@
             <h1 class="main_Header">Select Location</h1>
             <div class="main_ImageContainer">
                 <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
+                <!-- Buttons Start -->
                 <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
+                <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
+                <div id="headMenuFull" style="display: none;"> 
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mask" style="left: 56.5%; top: 19%;" data-tooltip="No Selection">MASK</button>
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 41.5%; top: 19%;" data-tooltip="No Selection">GLASS</button>
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button>
+                </div>
+                <!-- Buttons End -->
             </div>
         </div>
 
@@ -49,14 +58,14 @@
     </div>
     
     <!-- Footer -->
-    <!-- <div class="footer">
+    <div class="footer">
         <ul class="footer_List">
             <li><p>Copyright under MIT License to Brody.MC Media and all personal aliases.</p></li>
             <li><a href="LICENSE" title="Your work will not be saved."><p>View License.</p></a></li>
             <li><a href="credits.php" title="Your work will not be saved."><p>View Credits.</p></a></li>
             <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
         </ul>
-    </div>  -->
+    </div>  
 </body>
 <script>
     // Kept Variables
@@ -120,7 +129,8 @@
             for(part of equipment) {
                 if(part.type == node) {
                     // Subtract previous from Total Price
-                    $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2));
+                    totalPrice = (parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2);
+                    $("#totalPriceDisplay").text(totalPrice);
 
                     // Remove from equipment list
                     var index = equipment.indexOf(part);
@@ -136,7 +146,8 @@
         $("#"+node).attr("data-tooltip", item.name+" Selected");
 
         // Add to Total Price
-        $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())+parseFloat(item.price)).toFixed(2));
+        totalPrice = (parseFloat($("#totalPriceDisplay").text())+parseFloat(item.price)).toFixed(2);
+        $("#totalPriceDisplay").text(totalPrice);
 
         // Clear List
         cancelEquipmentSelection();
@@ -161,7 +172,8 @@
             for(part of equipment) {
                 if(part.type == node) {
                     // Subtract previous from Total Price
-                    $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2));
+                    totalPrice = (parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2);
+                    $("#totalPriceDisplay").text(totalPrice);
 
                     // Remove from equipment list
                     var index = equipment.indexOf(part);
@@ -175,6 +187,32 @@
 
         // Exit equipment section
         cancelEquipmentSelection();
+    }
+
+    // Expand expandable menu
+    // node, The button that triggered the expansion
+    // menuId, String of Id for the div containing the extra buttons
+    function expandMenu(node, menuId) {
+        // Variables
+        var displayMode = "none";
+        var displayText = node.getAttribute("data-name");
+
+        // Check which mode the menu is in
+        if(node.getAttribute("data-menustatus") == "closed") {
+            // Menu is currently closed
+            displayMode = "block";
+            displayText = "Close";
+            $("#"+node.id).attr("data-menustatus", "open");
+        } else {
+            // Menu is currently open
+            $("#"+node.id).attr("data-menustatus", "closed");
+        }
+
+        // Set menu to visible
+        $("#"+menuId).attr("style", "display: "+displayMode+";")
+
+        // Set Text
+        $("#"+node.id).text(displayText);
     }
 
     // Switches between the various toolbar menus.

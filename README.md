@@ -1,4 +1,4 @@
-# Kit Builder
+# Kit Builder v0.1
 Web based tool for configuring and building a kit. Original use is geared toward airsoft and paintball.
 
 # Using the Kit Builder
