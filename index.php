@@ -60,7 +60,8 @@
 </body>
 <script>
     // Kept Variables
-    var equipment = [];
+    var equipment = []; // Saved equipment selected by the user
+    var allItems = []; // All items currently loaded at one time (Has every item loaded from the XML file)
     var totalPrice = "00.00";
 
     // Opens the selection menu for the correct item
@@ -75,12 +76,13 @@
         $.get("actions/getEquipmentData.php?file=equipmentData", function(data, status){
             if(status === "success") {
                 // Populate Main List
-                var allItems = JSON.parse(data).item;
+                allItems = JSON.parse(data).item;
 
                 // Create Back button
                 $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="cancelEquipmentSelection();">Cancel Selection</button></li>');
 
                 // Create HTML options
+                var tick = 0;
                 for(item of allItems) {
                     // Only load correct type
                     if(item.type == sender.id) {
@@ -88,38 +90,54 @@
                         var html = '<li>';
                         html += '<p class="main_List_Header">'+item.name+' | $'+item.price+'</p>';
                         html += '<p>'+item.desc+'</p>';
-                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\',\''+item.name+'\');">Select</button>';
+                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\','+tick+');">Select</button>';
                         html += '</li>';
 
                         // Send it out
                         $("#equipmentList").append(html);
                     }
+
+                    // Iterate
+                    tick += 1;
                 }
             }
         });
     }
 
     // Adds selected item to Equipment array, removes old items, and sets tool tip of button
-    function swapData(node, item) {
+    function swapData(node, itemId) {
+        console.log("Node: "+node);
+        console.log(allItems[itemId]);
+
+        // Create item
+        var item = allItems[itemId];
+
         // Remove old Equipment if exists
-        for(part of equipment) {
-            if(part.includes(node)) {
-                var index = equipment.indexOf(part);
-                equipment.splice(index, 1);
+        if(equipment.length != 0) {
+            for(part of equipment) {
+                if(part.type == node) {
+                    // Subtract previous from Total Price
+                    $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())-parseFloat(part.price)).toFixed(2));
+
+                    // Remove from equipment list
+                    var index = equipment.indexOf(part);
+                    equipment.splice(index, 1);
+                }
             }
         }
 
         // Add to Equipment
-        equipment.push(item+"_"+node);
+        equipment.push(item);
 
         // Set tool tip
-        $("#"+node).attr("data-tooltip",item+" Selected");
+        $("#"+node).attr("data-tooltip", item.name+" Selected");
 
-        // Add to Total
-        // <<<<>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+        // Add to Total Price
+        $("#totalPriceDisplay").text((parseFloat($("#totalPriceDisplay").text())+parseFloat(item.price)).toFixed(2));
 
         // Clear List
         cancelEquipmentSelection();
+
         console.log(equipment);
     }
 
