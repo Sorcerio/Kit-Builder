@@ -21,7 +21,7 @@
             <a href="javascript:switchToolbarSelector('primary_menu');"><li id="primary_menu">Primary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('secondary_menu');"><li id="secondary_menu">Secondary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('extras_menu');"><li id="extras_menu">Extras</li></a>
-            <a href="#"><li id="extras_menu">Finish</li></a> <!-- TODO: Make finish page w/ Store Totals and Save button -->
+            <a href="javascript:switchToolbarSelector('finish_menu');"><li id="finish_menu">Finish</li></a> <!-- TODO: Make finish page w/ Store Totals and Save button -->
         </ul>
     </div>
 
@@ -31,30 +31,42 @@
         <div class="main_LeftPanel">
             <h1 class="main_Header">Select Location</h1>
             <div class="main_ImageContainer" id="mainNodeSelectionContainer">
-                <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
-                <!-- Buttons Start -->
-                <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
-                <div id="headMenuFull" style="display: none;"> 
-                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
-                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mask" style="left: 56.5%; top: 19%;" data-tooltip="No Selection">MASK</button>
-                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 41.5%; top: 19%;" data-tooltip="No Selection">GLASS</button>
-                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button>
+                <div id="equipmentMenu">
+                    <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
+
+                    <!-- Buttons Start -->
+                    <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
+                    <div id="headMenuFull" style="display: none;"> 
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mask" style="left: 56.5%; top: 19%;" data-tooltip="No Selection">MASK</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 41.5%; top: 19%;" data-tooltip="No Selection">GOGGL</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button>
+                    </div>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Shirt" style="left: 65%; top: 30%;" data-tooltip="No Selection">SHIRT</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Belt" style="left: 52%; top: 60%;" data-tooltip="No Selection">BELT</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Glove" style="left: 66%; top: 58%;" data-tooltip="No Selection">GLOVE</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Pant" style="left: 32%; top: 65%;" data-tooltip="No Selection">PANT</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Knee Pad" style="left: 57%; top: 75%;" data-tooltip="No Selection">KNEE</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Boot" style="left: 36%; top: 87%;" data-tooltip="No Selection">BOOT</button>
+                    <!-- Buttons End -->
                 </div>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Shirt" style="left: 65%; top: 30%;" data-tooltip="No Selection">SHIRT</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Vest" style="left: 47%; top: 35%;" data-tooltip="No Selection">VEST</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Belt" style="left: 52%; top: 60%;" data-tooltip="No Selection">BELT</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Glove" style="left: 66%; top: 58%;" data-tooltip="No Selection">GLOVE</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Pant" style="left: 32%; top: 65%;" data-tooltip="No Selection">PANT</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Knee Pad" style="left: 57%; top: 75%;" data-tooltip="No Selection">KNEE</button>
-
-                <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Boot" style="left: 36%; top: 87%;" data-tooltip="No Selection">BOOT</button>
-                <!-- Buttons End -->
+                <div id="primaryMenu">
+                    <img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image">
+                </div>
+                <div id="secondaryMenu">
+                    <h1>Secondary Weapons are not implemented yet!</h1>
+                </div>
+                <div id="extrasMenu">
+                    <h1>Extras are not implemented yet!</h1>
+                </div>
             </div>
         </div>
 
@@ -74,8 +86,8 @@
     <div class="footer">
         <ul class="footer_List">
             <li><p>Copyright under MIT License to Brody.MC Media and all personal aliases.</p></li>
-            <li><a href="LICENSE" title="Your work will not be saved."><p>View License.</p></a></li>
-            <li><a href="credits.php" title="Your work will not be saved."><p>View Credits.</p></a></li>
+            <li><a href="LICENSE" title="Opens in a new tab." target="_blank"><p>View License.</p></a></li>
+            <li><a href="credits.php" title="Opens in a new tab." target="_blank"><p>View Credits.</p></a></li>
             <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
         </ul>
     </div>  
@@ -84,7 +96,25 @@
     // Kept Variables
     var equipment = []; // Saved equipment selected by the user
     var allItems = []; // All items currently loaded at one time (Has every item loaded from the XML file)
+    var loadedHTML = "equipmentHTML";
+    var equipmentHTML = "";
+    var primaryHTML = "";
+    var secondaryHTML = "";
+    var extrasHTML = "";
     var totalPrice = "0.00";
+
+    // Start up function
+    function onStartUp() {
+        // Sets the HTML save points
+        equipmentHTML = $("#equipmentMenu").clone();
+        primaryHTML = $("#primaryMenu").clone();
+        secondaryHTML = $("#secondaryMenu").clone();
+        extrasHTML = $("#extrasMenu").clone();
+        $("#mainNodeSelectionContainer").empty();
+
+        // Start up
+        $("#mainNodeSelectionContainer").append(equipmentHTML);
+    }
 
     // Opens the selection menu for the correct item
     function openSelectionMenu(sender) {
@@ -95,6 +125,7 @@
         $("#selectSlotTitle").text("Select a "+sender.id);
         
         // Get Data
+        // TODO: Only call for all items once at start and just work from the 'allItems' list afterward
         $.get("actions/getEquipmentData.php?file=equipmentData", function(data, status){
             if(status === "success") {
                 // Populate Main List
@@ -214,7 +245,7 @@
         if(node.getAttribute("data-menustatus") == "closed") {
             // Menu is currently closed
             displayMode = "block";
-            displayText = "Close";
+            displayText = "CLOSE";
             $("#"+node.id).attr("data-menustatus", "open");
         } else {
             // Menu is currently open
@@ -234,31 +265,102 @@
         // Set Text of button
         switch(mode) {
             case "equip_menu":
+                // Swap menu indicator
                 $("#equip_menu").text("[ Equipment ]");
                 $("#primary_menu").text("Primary Weapon");
                 $("#secondary_menu").text("Secondary Weapon");
                 $("#extras_menu").text("Extras");
+                $("#finish_menu").text("Finish");
+
+                // Save Current HTML
+                saveCurrentHTML();
+                loadedHTML = "equipmentHTML";
+
+                // Clear Old HTML
+                $("#mainNodeSelectionContainer").empty();
+
+                // Attach HTML
+                $("#mainNodeSelectionContainer").append(equipmentHTML);
+
                 break;
 
             case "primary_menu":
+                // Swap menu indicator
                 $("#equip_menu").text("Equipment");
                 $("#primary_menu").text("[ Primary Weapon ]");
                 $("#secondary_menu").text("Secondary Weapon");
                 $("#extras_menu").text("Extras");
+                $("#finish_menu").text("Finish");
+
+                // Save Current HTML
+                saveCurrentHTML();
+                loadedHTML = "primaryHTML";
+
+                // Clear Old HTML
+                $("#mainNodeSelectionContainer").empty();
+
+                // Attach HTML
+                $("#mainNodeSelectionContainer").append(primaryHTML);
+
                 break;
 
             case "secondary_menu":
+                // Swap menu indicator
                 $("#equip_menu").text("Equipment");
                 $("#primary_menu").text("Primary Weapon");
                 $("#secondary_menu").text("[ Secondary Weapon ]");
                 $("#extras_menu").text("Extras");
+                $("#finish_menu").text("Finish");
+
+                // Save Current HTML
+                saveCurrentHTML();
+                loadedHTML = "secondaryHTML";
+
+                // Clear Old HTML
+                $("#mainNodeSelectionContainer").empty();
+
+                // Attach HTML
+                $("#mainNodeSelectionContainer").append(secondaryHTML);
+
                 break;
 
             case "extras_menu":
+                // Swap menu indicator
                 $("#equip_menu").text("Equipment");
                 $("#primary_menu").text("Primary Weapon");
                 $("#secondary_menu").text("Secondary Weapon");
                 $("#extras_menu").text("[ Extras ]");
+                $("#finish_menu").text("Finish");
+
+                // Save Current HTML
+                saveCurrentHTML();
+                loadedHTML = "extrasHTML";
+
+                // Clear Old HTML
+                $("#mainNodeSelectionContainer").empty();
+
+                // Attach HTML
+                $("#mainNodeSelectionContainer").append(extrasHTML);
+
+                break;
+
+            case "finish_menu":
+                // Swap menu indicator
+                $("#equip_menu").text("Equipment");
+                $("#primary_menu").text("Primary Weapon");
+                $("#secondary_menu").text("Secondary Weapon");
+                $("#extras_menu").text("Extras");
+                $("#finish_menu").text("[ Finish ]");
+
+                // Clear Old HTML
+                $("#mainNodeSelectionContainer").empty();
+
+                // Create Selection Panel
+                var html = '<h1>Finish is not implemented yet!</h1>';
+
+                // Attach HTML
+                $("#mainNodeSelectionContainer").append(html);
+                
                 break;
 
             default:
@@ -266,5 +368,30 @@
                 break;
         }
     }
+
+    // Saves the current HTML with changes so it can be correctly displayed when switched back to
+    function saveCurrentHTML() {
+        // Save current HTML
+        switch(loadedHTML) {
+            case "equipmentHTML":
+                equipmentHTML = $("#mainNodeSelectionContainer").clone();
+                break;
+
+            case "primaryHTML":
+                primaryHTML = $("#mainNodeSelectionContainer").clone();
+                break;
+
+            case "secondaryHTML":
+                secondaryHTML = $("#mainNodeSelectionContainer").clone();
+                break;
+
+            case "extrasHTML":
+                extrasHTML = $("#mainNodeSelectionContainer").clone();
+                break;
+        }
+    }
+
+    // Runs the startup
+    onStartUp();
 </script>
 </html>

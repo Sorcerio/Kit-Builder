@@ -13,7 +13,7 @@
 </header>
 <body>
     <!-- Return Bar -->
-    <a href="index.php"><p style="text-align: center;">Return to Kit Builder</p></a>
+    <!-- <a href="index.php"><p style="text-align: center;">Return to Kit Builder</p></a> -->
 
     <!-- Main Content -->
     <div style="margin-left: 10px;">
