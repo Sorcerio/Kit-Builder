@@ -59,7 +59,28 @@
                     <!-- Buttons End -->
                 </div>
                 <div id="primaryMenu">
-                    <img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image">
+                    <img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image" style="transform: translate(0%,-25%);">
+
+                    <!-- Buttons Start -->
+                    <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'frontGuardMenuFull')" id="FrontGuardMenu" style="left: 62%; top: 14%;" data-menustatus="closed" data-name="FRONT">FRONT</button>
+                    <div id="frontGuardMenuFull" style="display: none;">
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Side Mount" style="left: 54.5%; top: 14%;" data-tooltip="No Selection">SIDE MNT</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Under Mount" style="left: 62%; top: 21.5%;" data-tooltip="No Selection">UNDR MNT</button>
+                    </div>
+
+                    <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'magazineMenuFull')" id="MagazineMenu" style="left: 44%; top: 31%;" data-menustatus="closed" data-name="MAG">MAG</button>
+                    <div id="magazineMenuFull" style="display: none;">
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Low-Cap Magazine" style="left: 36.5%; top: 23.5%;" data-tooltip="No Selection">LOW CAP</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mid-Cap Magazine" style="left: 44%; top: 23.5%;" data-tooltip="No Selection">MID CAP</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="High-Cap Magazine" style="left: 51.5%; top: 23.5%;" data-tooltip="No Selection">HIGH CAP</button>
+                    </div>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Sight" style="left: 39%; top: 6.5%;" data-tooltip="No Selection">SIGHT</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Muzzle" style="left: 85%; top: 14%;" data-tooltip="No Selection">MZZLE</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Stock" style="left: 10%; top: 14%;" data-tooltip="No Selection">STOCK</button>
+                    <!-- Buttons End -->
                 </div>
                 <div id="secondaryMenu">
                     <h1>Secondary Weapons are not implemented yet!</h1>
