@@ -19,6 +19,8 @@
     <div style="margin-left: 10px;">
         <h3>Kit Builder Credits</h3>
         <ul>
+            <li>W3 Schools CSS Library, <a href="https://www.w3schools.com/w3css/default.asp">W3 Schools</a></li>
+            <li>JQuery, <a href="https://jquery.com/">JQuery</a></li>
             <li>Stack Overflow</li>
             <li>MIT License, MIT</li>
             <li>Soldier Background Image, <a href="http://www.gfxmag.com">GFXMAG</a></li>
@@ -26,15 +28,6 @@
             <li>Button Tool Tips, <a href="https://codepen.io/cbracco/pen/qzukg">Chris Bracco</a></li>
         </ul>
     </div>
-
-    <!-- Footer -->
-    <div class="footer">
-        <ul class="footer_List">
-            <li><p>Copyright under MIT License to Brody.MC Media and all personal aliases.</p></li>
-            <li><a href="#"><p>View License.</p></a></li>
-            <li><a href="#"><p>View Credits.</p></a></li>
-        </ul>
-    </div> 
 </body>
 <script>
 </script>

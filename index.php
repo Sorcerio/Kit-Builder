@@ -21,7 +21,7 @@
             <a href="javascript:switchToolbarSelector('primary_menu');"><li id="primary_menu">Primary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('secondary_menu');"><li id="secondary_menu">Secondary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('extras_menu');"><li id="extras_menu">Extras</li></a>
-            <a href="javascript:switchToolbarSelector('finish_menu');"><li id="finish_menu">Finish</li></a> <!-- TODO: Make finish page w/ Store Totals and Save button -->
+            <a href="javascript:openFinishMenu();"><li id="finish_menu">Finish</li></a> <!-- TODO: Make finish page w/ Store Totals and Save button -->
         </ul>
     </div>
 
@@ -102,6 +102,42 @@
             </ul>
         </div>
     </div>
+
+    <!-- Finish Button Pop-Up -->
+    <div id="finishButtonModal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container modal">
+                <!-- Close button -->
+                <span onclick="$('#finishButtonModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
+
+                <!-- Contents -->
+                <h1 class="modal_MainHeader">Total Price: $<span id="modal_TotalPrice">0.00</span></h1>
+                <div id="modal_PriceBreakdown" class="modal_LeftPanel">
+                    <!-- Populated by script -->
+                    <div id="modal_PB_STORENAME">
+                        <p class="modal_MinorHeader">STORE NAME</p>
+                        <table class="modal_BreakdownTable" id="modal_PB_STORENAME_table">
+                            <tr>
+                                <th>NAME OF ITEM</th>
+                                <th>$0.00</th>
+                                <th><a href="#">Link</a></th>
+                            </tr>
+                            <tr>
+                                <th>NAME OF ITEM</th>
+                                <th>$0.00</th>
+                                <th><a href="#">Link</a></th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal_RightPanel" style="margin-top:15px;">
+                    <button type="button" class="modal_MenuButton" onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
+                    <button type="button" class="modal_MenuButton" onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button>
+                    <!-- <button type="button" class="modal_MenuButton" onclick="finishMenu_Reset();" id="loadFromCsvBtn">Reset Loadout</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer -->
     <div class="footer">
@@ -133,7 +169,7 @@
         extrasHTML = $("#extrasMenu").clone();
         $("#mainNodeSelectionContainer").empty();
 
-        // Start up
+        // Start at specific HTML
         $("#mainNodeSelectionContainer").append(equipmentHTML);
     }
 
@@ -365,25 +401,6 @@
 
                 break;
 
-            case "finish_menu":
-                // Swap menu indicator
-                $("#equip_menu").text("Equipment");
-                $("#primary_menu").text("Primary Weapon");
-                $("#secondary_menu").text("Secondary Weapon");
-                $("#extras_menu").text("Extras");
-                $("#finish_menu").text("[ Finish ]");
-
-                // Clear Old HTML
-                $("#mainNodeSelectionContainer").empty();
-
-                // Create Selection Panel
-                var html = '<h1>Finish is not implemented yet!</h1>';
-
-                // Attach HTML
-                $("#mainNodeSelectionContainer").append(html);
-                
-                break;
-
             default:
                 console.log("Unknown Toolbar Id");
                 break;
@@ -410,6 +427,91 @@
                 extrasHTML = $("#mainNodeSelectionContainer").clone();
                 break;
         }
+    }
+
+    // Opens the finish page with the current list
+    function openFinishMenu() {
+        console.log(equipment);
+
+        // Show the Finish Menu
+        $("#finishButtonModal").css("display","block");
+
+        // Populate total price
+        $("#modal_TotalPrice").text(totalPrice);
+
+        // Clean Price Breakdown
+        $("#modal_PriceBreakdown").empty();
+
+        // Check if any equipment selected
+        if(equipment.length != 0) {
+            // Populate Price Breakdown
+            var usedStores = [];
+            for(item of equipment) {
+                var isPresent = false;
+                for(store of usedStores) {
+                    console.log(store);
+                    if(store == item.store) {
+                        isPresent = true;
+                    }
+                }
+
+                if(isPresent) {
+                    // Need to create a new store entry
+                    // Prepare Table Entry
+                    var html = '<tr>';
+                    html += '<th>'+item.name+'</th>';
+                    html += '<th>$'+item.price+'</th>';
+                    html += '<th><a href="'+item.link+'">Link</a></th>';
+                    html += '</tr>';
+
+                    // Deploy Entry
+                    $("#modal_PB_"+item.store+"_table").append(html);
+                } else {
+                    // There's already a store entry
+                    // Prepare full HTML Table
+                    var html = '<div id="modal_PB_'+item.store+'">';
+                    html += '<p class="modal_MinorHeader">'+item.store+'</p>';
+                    html += '<table class="modal_BreakdownTable" id="modal_PB_'+item.store+'_table">';
+                    html += '<tr>';
+                    html += '<th>'+item.name+'</th>';
+                    html += '<th>$'+item.price+'</th>';
+                    html += '<th><a href="'+item.link+'">Link</a></th>';
+                    html += '</tr>';
+                    html += '</table>';
+                    html += '</div>';
+
+                    // Deploy full HTML
+                    $("#modal_PriceBreakdown").append(html);
+
+                    // Add to 'usedStores'
+                    usedStores.push(item.store);
+                }
+            }
+        } else {
+            // There's no equipment selected
+            $("#modal_PriceBreakdown").append("<h4>No equipment selected.</h4>");
+        }
+    }
+
+    // Saves the current 'equipment' list to a CSV file for download
+    function finishMenu_SaveCSV() {
+        console.log("TODO: Implement Saving");
+    }
+
+    // Loads a set of data into the 'equipment' list
+    function finishMenu_LoadCSV() {
+        console.log("TODO: Implement Loading");
+    }
+
+    // Resets the equipment list to nothing
+    function finishMenu_Reset() {
+        // Reset
+        for(item of equipment) {
+            clearEquipmentSelection(item.type);
+        }
+
+        // Close Finish Menu
+        $('#finishButtonModal').css('display','none');
     }
 
     // Runs the startup
