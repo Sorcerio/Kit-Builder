@@ -340,4 +340,9 @@ body {
     border: 1px solid white;
 }
 
+.main_ProductLink {
+    text-decoration: none;
+    font-style: italic;
+}
+
 /* TODO: Add animations to Node Menus appearing */

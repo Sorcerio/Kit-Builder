@@ -74,7 +74,7 @@
 
                     <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'frontGuardMenuFull')" id="FrontGuardMenu" style="left: 62%; top: 14%;" data-menustatus="closed" data-name="FRONT">FRONT</button>
                     <div id="frontGuardMenuFull" style="display: none;">
-                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Side Mount" style="left: 54.5%; top: 14%;" data-tooltip="No Selection">SIDE MNT</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Rail Mount" style="left: 54.5%; top: 14%;" data-tooltip="No Selection">RAIL MNT</button>
                         <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Under Mount" style="left: 62%; top: 21.5%;" data-tooltip="No Selection">UNDR MNT</button>
                     </div>
 
@@ -198,7 +198,7 @@
                     if(item.type == sender.id) {
                         // Build HTML
                         var html = '<li>';
-                        html += '<p class="main_List_Header">'+item.name+' | $'+item.price+'</p>';
+                        html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
                         html += '<p>'+item.desc+'</p>';
                         html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\','+tick+');">Select</button>';
                         html += '</li>';
@@ -316,6 +316,9 @@
     // Switches between the various toolbar menus.
     // mode, String of Id of button selected
     function switchToolbarSelector(mode) {
+        // Close Menu
+        cancelEquipmentSelection();
+
         // Set Text of button
         switch(mode) {
             case "equip_menu":
