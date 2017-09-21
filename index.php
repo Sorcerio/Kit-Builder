@@ -62,6 +62,16 @@
                     <img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image" style="transform: translate(0%,-25%);">
 
                     <!-- Buttons Start -->
+                    <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'weaponTypeMenuFull')" id="WeaponTypeMenu" style="left: 3%; top: 0%;" data-menustatus="closed" data-name="WEPN">WEPN</button>
+                    <div id="weaponTypeMenuFull" style="display: none;">
+                        <!-- TODO: Implement switching Weapon type. -->
+                        <!-- TODO: Implement selecting pre-built models -->
+                        <!-- TODO: Increase customization into the gear box and beyond -->
+                        <button type="button" class="main_SelectorButton" onclick="#" id="selectM4" style="left: 10.5%; top: 0%;">M4</button>
+                        <button type="button" class="main_SelectorButton" onclick="#" id="selectAK" style="left: 18%; top: 0%;">AK</button>
+                        <button type="button" class="main_SelectorButton" onclick="#" id="selectPistol" style="left: 25.5%; top: 0%;">PSTL</button>
+                    </div>
+
                     <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'frontGuardMenuFull')" id="FrontGuardMenu" style="left: 62%; top: 14%;" data-menustatus="closed" data-name="FRONT">FRONT</button>
                     <div id="frontGuardMenuFull" style="display: none;">
                         <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Side Mount" style="left: 54.5%; top: 14%;" data-tooltip="No Selection">SIDE MNT</button>
@@ -80,6 +90,8 @@
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Muzzle" style="left: 85%; top: 14%;" data-tooltip="No Selection">MZZLE</button>
 
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Stock" style="left: 10%; top: 14%;" data-tooltip="No Selection">STOCK</button>
+
+                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Battery" style="left: 10%; top: 30%;" data-tooltip="No Selection">BTRY</button>
                     <!-- Buttons End -->
                 </div>
                 <div id="secondaryMenu">
@@ -114,21 +126,6 @@
                 <h1 class="modal_MainHeader">Total Price: $<span id="modal_TotalPrice">0.00</span></h1>
                 <div id="modal_PriceBreakdown" class="modal_LeftPanel">
                     <!-- Populated by script -->
-                    <div id="modal_PB_STORENAME">
-                        <p class="modal_MinorHeader">STORE NAME</p>
-                        <table class="modal_BreakdownTable" id="modal_PB_STORENAME_table">
-                            <tr>
-                                <th>NAME OF ITEM</th>
-                                <th>$0.00</th>
-                                <th><a href="#">Link</a></th>
-                            </tr>
-                            <tr>
-                                <th>NAME OF ITEM</th>
-                                <th>$0.00</th>
-                                <th><a href="#">Link</a></th>
-                            </tr>
-                        </table>
-                    </div>
                 </div>
                 <div class="modal_RightPanel" style="margin-top:15px;">
                     <button type="button" class="modal_MenuButton" onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
