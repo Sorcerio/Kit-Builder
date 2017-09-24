@@ -6,6 +6,7 @@ Price       = Price in '00.00' format with no '$' and no ','
 Store       = Name of the store that it comes from (Evike, Airsoft Megastore, 5.11 Tactical, etc)
 Desc        = Description of the item in question (limit of 128)
 Type        = Type of equipment (Gun, Mask, Goggle, Boot, Knee Pad, Low-Cap Magazine, etc)
+Image       = Link to an image of the part
 Web Link    = Web address of the item
 
 Example XML:
@@ -15,6 +16,7 @@ Example XML:
     <store>STORENAME</store>
     <desc>DESCRIPTION</desc>
     <type>TYPE</type>
+    <image>IMAGE</image>
     <link>WEBLINK</link>
 </item>
 -->
@@ -27,16 +29,18 @@ Example XML:
         <store>STORENAME</store>
         <desc>DESCRIPTION</desc>
         <type>TYPE</type>
+        <image>IMAGE</image>
         <link>WEBLINK</link>
     </item>
 
     <item>
         <name>Suicide Vest</name>
         <price>10.00</price>
-        <store>Backyard</store>
+        <store>Back East</store>
         <desc>It's a god damn Suicide Vest. Use it.</desc>
         <type>Vest</type>
-        <link>www.fuckyou.com</link>
+        <image>https://www.evike.com/images/large/vest-av02-bk.jpg</image>
+        <link>http://www.fuckyou.com</link>
     </item>
 
     <item>
@@ -45,7 +49,8 @@ Example XML:
         <store>Backyard</store>
         <desc>It's a god damn Vest. Use it.</desc>
         <type>Vest</type>
-        <link>www.fuckyou.com</link>
+        <image>https://www.evike.com/images/large/vest-av02-bk.jpg</image>
+        <link>http://www.fuckyou.com</link>
     </item>
 
     <item>
@@ -54,7 +59,8 @@ Example XML:
         <store>Backyard</store>
         <desc>You'll shoot your eye out.</desc>
         <type>Goggle</type>
-        <link>www.fuckyou.com</link>
+        <image>Broken Link</image>
+        <link>http://www.fuckyou.com</link>
     </item>
 
     <!-- Primary Weapon -->
