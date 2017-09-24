@@ -22,7 +22,6 @@
             <li>W3 Schools CSS Library, <a href="https://www.w3schools.com/w3css/default.asp">W3 Schools</a></li>
             <li>JQuery, <a href="https://jquery.com/">JQuery</a></li>
             <li>Stack Overflow</li>
-            <li>MIT License, MIT</li>
             <li>Soldier Background Image, <a href="http://www.gfxmag.com">GFXMAG</a></li>
             <li>Soldier for Favicon, <a href="http://www.gfxmag.com">GFXMAG</a></li>
             <li>Button Tool Tips, <a href="https://codepen.io/cbracco/pen/qzukg">Chris Bracco</a></li>
