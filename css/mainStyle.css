@@ -146,7 +146,7 @@ body {
 }
 
 .modal_BreakdownTable tr th {
-    padding-left: 10px;
+    /* padding-left: 10px; */
     text-align: left;
 }
 
@@ -202,6 +202,23 @@ body {
 
 .modal_closeButton:hover {
     background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.modal_removeItemButton {
+    background-color: transparent;
+    color: red;
+    border: none;
+    outline: none;
+    height: 3%;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    border-radius: 100%;
+}
+
+.modal_removeItemButton:hover {
+    background-color: red;
     color: white;
     cursor: pointer;
 }

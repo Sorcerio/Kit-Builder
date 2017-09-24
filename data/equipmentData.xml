@@ -9,6 +9,8 @@ Type        = Type of equipment (Gun, Mask, Goggle, Boot, Knee Pad, Low-Cap Maga
 Image       = Link to an image of the part
 Web Link    = Web address of the item
 
+NOTE: Spaces in Type should be replaced with '++'!
+
 Example XML:
 <item>
     <name>NAME</name>
@@ -23,44 +25,235 @@ Example XML:
 
 <equipment>
     <!-- General Equipment -->
+    <!-- Goggle -->
     <item>
-        <name>NAME</name>
-        <price>0000</price>
-        <store>STORENAME</store>
-        <desc>DESCRIPTION</desc>
-        <type>TYPE</type>
-        <image>IMAGE</image>
-        <link>WEBLINK</link>
-    </item>
-
-    <item>
-        <name>Suicide Vest</name>
-        <price>10.00</price>
-        <store>Back East</store>
-        <desc>It's a god damn Suicide Vest. Use it.</desc>
-        <type>Vest</type>
-        <image>https://www.evike.com/images/large/vest-av02-bk.jpg</image>
-        <link>http://www.fuckyou.com</link>
-    </item>
-
-    <item>
-        <name>Another Vest</name>
-        <price>10000.00</price>
-        <store>Backyard</store>
-        <desc>It's a god damn Vest. Use it.</desc>
-        <type>Vest</type>
-        <image>https://www.evike.com/images/large/vest-av02-bk.jpg</image>
-        <link>http://www.fuckyou.com</link>
-    </item>
-
-    <item>
-        <name>Goggles</name>
+        <name>Goggle A</name>
         <price>10.00</price>
         <store>Backyard</store>
         <desc>You'll shoot your eye out.</desc>
         <type>Goggle</type>
-        <image>Broken Link</image>
-        <link>http://www.fuckyou.com</link>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+     <item>
+        <name>Goggle B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>As cool as not going to school!</desc>
+        <type>Goggle</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Helmet -->
+    <item>
+        <name>Helmet A</name>
+        <price>30.00</price>
+        <store>Backyard</store>
+        <desc>Clink clink. Just saved you.</desc>
+        <type>Helmet</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Helmet B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>Everyone else wears this helment! You should too!</desc>
+        <type>Helmet</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Mask -->
+    <item>
+        <name>Mask A</name>
+        <price>30.00</price>
+        <store>Backyard</store>
+        <desc>This one has a skull on it because tacticool.</desc>
+        <type>Mask</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Mask B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>For when you like to have teeth later.</desc>
+        <type>Mask</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Scarf -->
+    <item>
+        <name>Scarf A</name>
+        <price>15.00</price>
+        <store>Backyard</store>
+        <desc>Protect your throat from chops.</desc>
+        <type>Scarf</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Scarf B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>You need it because I only do throat shots.</desc>
+        <type>Scarf</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Shirt -->
+    <item>
+        <name>Shirt A</name>
+        <price>75.00</price>
+        <store>Backyard</store>
+        <desc>It's fake real military stuff.</desc>
+        <type>Shirt</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Shirt B</name>
+        <price>10.00</price>
+        <store>Frontyard</store>
+        <desc>A weird Hellokitty shirt some people wear because they're weird.</desc>
+        <type>Shirt</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Vest -->
+    <item>
+        <name>Vest A</name>
+        <price>80.00</price>
+        <store>Backyard</store>
+        <desc>Not bulletproof but they don't know that!</desc>
+        <type>Vest</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Vest B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>I call it a tactical phanny pack.</desc>
+        <type>Vest</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Glove -->
+    <item>
+        <name>Glove A</name>
+        <price>60.00</price>
+        <store>Backyard</store>
+        <desc>Ohh fake Mechanix gloves.</desc>
+        <type>Glove</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Glove B</name>
+        <price>75.00</price>
+        <store>Frontyard</store>
+        <desc>This one comes with *no fingers* so it costs more!</desc>
+        <type>Glove</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Belt -->
+    <item>
+        <name>Belt A</name>
+        <price>60.00</price>
+        <store>Backyard</store>
+        <desc>This one's a duty belt straight from 5.11 Tactical.</desc>
+        <type>Belt</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Belt B</name>
+        <price>7.00</price>
+        <store>Frontyard</store>
+        <desc>This is your dad's dress belt you stole to go play airsoft with.</desc>
+        <type>Belt</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Pant -->
+    <item>
+        <name>Pant A</name>
+        <price>100.00</price>
+        <store>Backyard</store>
+        <desc>I spent $100 on pants I wear once a month!</desc>
+        <type>Pant</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Pant B</name>
+        <price>15.00</price>
+        <store>Frontyard</store>
+        <desc>You see, cargo pants work great for mag retention!</desc>
+        <type>Pant</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Knee++Pad -->
+    <item>
+        <name>Knee Pad A</name>
+        <price>85.00</price>
+        <store>Backyard</store>
+        <desc>These ones go *inside* pants you don't own!</desc>
+        <type>Knee++Pad</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Knee Pad B</name>
+        <price>25.00</price>
+        <store>Frontyard</store>
+        <desc>GO FOR THE POWERSLIDE.</desc>
+        <type>Knee++Pad</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <!-- Boot -->
+    <item>
+        <name>Boot A</name>
+        <price>60.00</price>
+        <store>Backyard</store>
+        <desc>Hiking boots because they're better.</desc>
+        <type>Boot</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
+    </item>
+
+    <item>
+        <name>Boot B</name>
+        <price>75.00</price>
+        <store>Frontyard</store>
+        <desc>Jackboots. Nothing else needs to be said.</desc>
+        <type>Boot</type>
+        <image>NO_LINK</image>
+        <link>http://www.example.com</link>
     </item>
 
     <!-- Primary Weapon -->

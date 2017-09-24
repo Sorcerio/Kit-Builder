@@ -53,7 +53,7 @@
 
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Pant" style="left: 32%; top: 65%;" data-tooltip="No Selection">PANT</button>
 
-                    <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Knee Pad" style="left: 57%; top: 75%;" data-tooltip="No Selection">KNEE</button>
+                    <!-- <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Knee++Pad" style="left: 57%; top: 75%;" data-tooltip="No Selection">KNEE</button> -->
 
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Boot" style="left: 36%; top: 87%;" data-tooltip="No Selection">BOOT</button>
                     <!-- Buttons End -->
@@ -141,7 +141,7 @@
         <ul class="footer_List">
             <li><p>Copyright under 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License' to Brody.MC Media and all personal aliases.</p></li>
             <!-- <li><a href="LICENSE" title="Opens in a new tab." target="_blank"><p>View License.</p></a></li> -->
-            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><p>View License</p></a>.</li>
+            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><p>View License</p></a>.</li>
             <li><a href="credits.php" title="Opens in a new tab." target="_blank"><p>View Credits.</p></a></li>
             <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
         </ul>
@@ -177,7 +177,9 @@
 
         // Clean List
         $("#equipmentList").empty();
-        $("#selectSlotTitle").text("Select a "+sender.id);
+
+        // Set title
+        $("#selectSlotTitle").text("Select a "+sender.id.replace("++", " "));
         
         // Get Data
         // TODO: Only call for all items once at start and just work from the 'allItems' list afterward
@@ -241,8 +243,9 @@
         // Add to Equipment
         equipment.push(item);
 
-        // Set tool tip
-        $("#"+node).attr("data-tooltip", item.name+" Selected");
+        // Set tool tips
+        setAllTooltips();
+        // $("#"+node).attr("data-tooltip", item.name+" Selected");
 
         // Add to Total Price
         totalPrice = (parseFloat($("#totalPriceDisplay").text())+parseFloat(item.price)).toFixed(2);
@@ -286,6 +289,17 @@
 
         // Exit equipment section
         cancelEquipmentSelection();
+    }
+
+    // Sets the tooltips to data from the equipment list
+    function setAllTooltips() {
+        for(part of equipment) {
+            try {
+                $("#"+part.type).attr("data-tooltip", part.name+" Selected");
+            } catch(error) {
+                null;
+            }
+        }
     }
 
     // Expand expandable menu
@@ -432,7 +446,7 @@
 
     // Opens the finish page with the current list
     function openFinishMenu() {
-        console.log(equipment);
+        // console.log(equipment);
 
         // Show the Finish Menu
         $("#finishButtonModal").css("display","block");
@@ -450,7 +464,7 @@
             for(item of equipment) {
                 var isPresent = false;
                 for(store of usedStores) {
-                    console.log(store);
+                    // console.log(store);
                     if(store == item.store) {
                         isPresent = true;
                     }
@@ -460,9 +474,10 @@
                     // Need to create a new store entry
                     // Prepare Table Entry
                     var html = '<tr>';
+                    // html += '<th><button type="button" class="modal_removeItemButton" onclick="removeItemInModal('+item.name+')">&times;</button></th>'
                     html += '<th>'+item.name+'</th>';
                     html += '<th>$'+item.price+'</th>';
-                    html += '<th><a href="'+item.link+'">Link</a></th>';
+                    html += '<th><a href="'+item.link+'" target="_blank">Link</a></th>';
                     html += '</tr>';
 
                     // Deploy Entry
@@ -474,9 +489,10 @@
                     html += '<p class="modal_MinorHeader">'+item.store+'</p>';
                     html += '<table class="modal_BreakdownTable" id="modal_PB_'+item.store+'_table">';
                     html += '<tr>';
+                    // html += '<th><button type="button" class="modal_removeItemButton" onclick="removeItemInModal(\'"'+item.name+'\')">&times;</button></th>'
                     html += '<th>'+item.name+'</th>';
                     html += '<th>$'+item.price+'</th>';
-                    html += '<th><a href="'+item.link+'">Link</a></th>';
+                    html += '<th><a href="'+item.link+'" target="_blank">Link</a></th>';
                     html += '</tr>';
                     html += '</table>';
                     html += '</div>';
@@ -494,14 +510,32 @@
         }
     }
 
+    // Removes an item from the equipment list and refreshes the tool tips
+    // Takes the name of the item to remove
+    function removeItemInModal(name) {
+        // console.log(name);
+
+        // Remove the item from list
+        for(part of equipment) {
+            if(name == part.name) {
+                equipment.splice(equipment.indexOf(name),1);
+            }
+        }
+
+        // Refresh the tool tips
+        setAllTooltips();
+    }
+
     // Saves the current 'equipment' list to a CSV file for download
     function finishMenu_SaveCSV() {
         console.log("TODO: Implement Saving");
+        alert("Save loadout has not been implemented yet. Check back soon!");
     }
 
     // Loads a set of data into the 'equipment' list
     function finishMenu_LoadCSV() {
         console.log("TODO: Implement Loading");
+        alert("Load loadout has not been implemented yet. Check back soon!");
     }
 
     // Resets the equipment list to nothing
