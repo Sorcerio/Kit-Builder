@@ -130,7 +130,7 @@
                 <div class="modal_RightPanel" style="margin-top:15px;">
                     <button type="button" class="modal_MenuButton" onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
                     <button type="button" class="modal_MenuButton" onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button>
-                    <!-- <button type="button" class="modal_MenuButton" onclick="finishMenu_Reset();" id="loadFromCsvBtn">Reset Loadout</button> -->
+                    <button type="button" class="modal_MenuButton" onclick="finishMenu_Reset();" id="loadFromCsvBtn">Reset Loadout</button> 
                 </div>
             </div>
         </div>
@@ -506,13 +506,8 @@
 
     // Resets the equipment list to nothing
     function finishMenu_Reset() {
-        // Reset
-        for(item of equipment) {
-            clearEquipmentSelection(item.type);
-        }
-
-        // Close Finish Menu
-        $('#finishButtonModal').css('display','none');
+        // Reload the page. Work smarter, not harder.
+        location.reload();
     }
 
     // Runs the startup
