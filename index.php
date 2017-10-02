@@ -233,8 +233,16 @@
                     if(item.type == sender.id) {
                         // Build HTML
                         var html = '<li>';
-                        html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
-                        html += '<p>'+item.desc+'</p>';
+                        if(item.name.length > 80) {
+                            html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name.substring(0,80)+'...</a> | $'+item.price+'</p>';
+                        } else {
+                            html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
+                        }
+                        if(item.desc.length > 90) {
+                            html += '<p>'+item.desc.substring(0,90)+'...</p>';
+                        } else {
+                            html += '<p>'+item.desc+'</p>';
+                        }
                         html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\','+tick+');">Select</button>';
                         html += '</li>';
 
