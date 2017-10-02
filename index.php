@@ -29,7 +29,7 @@
     <div class="toolBar_otherSpacer">
         <!-- Left Panel | Spot Choice -->
         <div class="main_LeftPanel">
-            <h1 class="main_Header">Select Location</h1>
+            <h1 class="main_Header" id="main_LeftInstructionHeader">Select Location</h1>
             <div class="main_ImageContainer" id="mainNodeSelectionContainer">
                 <div id="equipmentMenu">
                     <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
@@ -98,7 +98,34 @@
                     <h1>Secondary Weapons are not implemented yet!</h1>
                 </div>
                 <div id="extrasMenu">
-                    <h1>Extras are not implemented yet!</h1>
+                    <forum class="main_ExtraItemForum">
+                        <div class="inputs">
+                            <!-- Inputs -->
+                            <!-- Image and Type are defaulted -->
+                            <h4>Item Name</h4>
+                            <p>The name of your item.</p>
+                            <input type="text" name="itemName">
+
+                            <h4>Item Price</h4>
+                            <p>The price of your item. Preferably, in USD.</p>
+                            <input type="number" name="itemPrice">
+
+                            <h4>Store Name</h4>
+                            <p>The name of the store that your item is from.</p>
+                            <input type="text" name="itemStore">
+
+                            <h4>Item Description</h4>
+                            <p>A short description of the item to help you remember.</p>
+                            <input type="text" name="itemDesc">
+
+                            <h4>Item Link</h4>
+                            <p>The weblink to your item.</p>
+                            <input type="text" name="itemLink">
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="button" class="" onclick="#" id="extras_AddItem">Add New Item</button>
+                    </forum>
                 </div>
             </div>
         </div>
@@ -141,7 +168,7 @@
         <ul class="footer_List">
             <li><p>Copyright under 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License' to Brody.MC Media and all personal aliases.</p></li>
             <!-- <li><a href="LICENSE" title="Opens in a new tab." target="_blank"><p>View License.</p></a></li> -->
-            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank"><p>View License.</p></a>.</li>
+            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Opens in a new tab." target="_blank"><p>View License.</p></a>.</li>
             <li><a href="credits.php" title="Opens in a new tab." target="_blank"><p>View Credits.</p></a></li>
             <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
         </ul>
@@ -151,6 +178,8 @@
     // Kept Variables
     var equipment = []; // Saved equipment selected by the user
     var allItems = []; // All items currently loaded at one time (Has every item loaded from the XML file)
+    var normalMenuHeader = "Select Location";
+    var extrasMenuHeader = "Add Extra Item";
     var loadedHTML = "equipmentHTML";
     var equipmentHTML = "";
     var primaryHTML = "";
@@ -169,6 +198,9 @@
 
         // Start at specific HTML
         $("#mainNodeSelectionContainer").append(equipmentHTML);
+
+        // $("#main_LeftInstructionHeader").text(extrasMenuHeader);
+        // $("#mainNodeSelectionContainer").append(extrasHTML);
     }
 
     // Opens the selection menu for the correct item
@@ -354,6 +386,9 @@
                 // Attach HTML
                 $("#mainNodeSelectionContainer").append(equipmentHTML);
 
+                // Switch Title
+                $("#main_LeftInstructionHeader").text(normalMenuHeader);
+
                 break;
 
             case "primary_menu":
@@ -373,6 +408,9 @@
 
                 // Attach HTML
                 $("#mainNodeSelectionContainer").append(primaryHTML);
+
+                // Switch Title
+                $("#main_LeftInstructionHeader").text(normalMenuHeader);
 
                 break;
 
@@ -394,6 +432,9 @@
                 // Attach HTML
                 $("#mainNodeSelectionContainer").append(secondaryHTML);
 
+                // Switch Title
+                $("#main_LeftInstructionHeader").text(normalMenuHeader);
+
                 break;
 
             case "extras_menu":
@@ -413,6 +454,9 @@
 
                 // Attach HTML
                 $("#mainNodeSelectionContainer").append(extrasHTML);
+
+                // Switch Title
+                $("#main_LeftInstructionHeader").text(extrasMenuHeader);
 
                 break;
 
