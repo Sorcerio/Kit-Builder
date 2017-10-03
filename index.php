@@ -162,6 +162,21 @@
             </div>
         </div>
     </div>
+
+    <!-- Link Buttons Pop-Up -->
+    <div id="linkButtonModal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container modal">
+                <!-- Close button -->
+                <span onclick="$('#linkButtonModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
+
+                <!-- Contents -->
+                <div class="modal_iFrame">
+                    <iframe src="http://www.example.com" id="linkButtonModal_iFrame"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer -->
     <div class="footer">
@@ -234,9 +249,9 @@
                         // Build HTML
                         var html = '<li>';
                         if(item.name.length > 80) {
-                            html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name.substring(0,80)+'...</a> | $'+item.price+'</p>';
+                            html += '<p class="main_List_Header"><a href="javascript:openLinkMenu(\''+item.link+'\');" class="main_ProductLink" target="_blank">'+item.name.substring(0,80)+'...</a> | $'+item.price+'</p>';
                         } else {
-                            html += '<p class="main_List_Header"><a href="'+item.link+'" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
+                            html += '<p class="main_List_Header"><a href="javascript:openLinkMenu(\''+item.link+'\');" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
                         }
                         if(item.desc.length > 90) {
                             html += '<p>'+item.desc.substring(0,90)+'...</p>';
@@ -560,6 +575,15 @@
             // There's no equipment selected
             $("#modal_PriceBreakdown").append("<h4>No equipment selected.</h4>");
         }
+    }
+
+    // Opens the link page with the selected link address
+    function openLinkMenu(link) {
+        // Switch the link menu's link
+        $("#linkButtonModal_iFrame").attr("src", link);
+
+        // Show the Link Menu
+        $("#linkButtonModal").css("display","block");
     }
 
     // Removes an item from the equipment list and refreshes the tool tips

@@ -125,7 +125,7 @@ body {
   opacity: 1;
 }
 
-/* Finish Modal Panel */
+/* Finish and Link Modal Panel */
 .modal {
     border: 1px solid black;
 }
@@ -221,6 +221,19 @@ body {
     background-color: red;
     color: white;
     cursor: pointer;
+}
+
+.modal_iFrame {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+}
+
+.modal_iFrame iframe {
+    width: 95%;
+    /* height: 500px; */
+    height: 35em;
+    border: none;
 }
 
 /* Main Contents */
