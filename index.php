@@ -104,27 +104,27 @@
                             <!-- Image and Type are defaulted -->
                             <h4>Item Name</h4>
                             <p>The name of your item.</p>
-                            <input type="text" name="itemName">
+                            <input type="text" name="itemName" id="itemName">
 
                             <h4>Item Price</h4>
                             <p>The price of your item. Preferably, in USD.</p>
-                            <input type="number" name="itemPrice">
+                            <input type="number" name="itemPrice" id="itemPrice">
 
                             <h4>Store Name</h4>
                             <p>The name of the store that your item is from.</p>
-                            <input type="text" name="itemStore">
+                            <input type="text" name="itemStore" id="itemStore">
 
                             <h4>Item Description</h4>
                             <p>A short description of the item to help you remember.</p>
-                            <input type="text" name="itemDesc">
+                            <input type="text" name="itemDesc" id="itemDesc">
 
                             <h4>Item Link</h4>
                             <p>The weblink to your item.</p>
-                            <input type="text" name="itemLink">
+                            <input type="text" name="itemLink" id="itemLink">
                         </div>
 
                         <!-- Submit Button -->
-                        <button type="button" class="" onclick="#" id="extras_AddItem">Add New Item</button>
+                        <button type="button" class="" onclick="addExtrasItem();" id="extras_AddItem">Add New Item</button>
                     </forum>
                 </div>
             </div>
@@ -220,13 +220,21 @@
 
     // Opens the selection menu for the correct item
     function openSelectionMenu(sender) {
-        // console.log(sender);
+        console.log(sender);
+
+        // Extract Sender Id
+        senderId = undefined;
+        if(sender.type == "button") {
+            senderId = sender.id;
+        } else {
+            senderId = sender;
+        }
 
         // Clean List
         $("#equipmentList").empty();
 
         // Set title
-        $("#selectSlotTitle").text("Select a "+sender.id.replace("++", " "));
+        $("#selectSlotTitle").text("Select a "+senderId.replace("++", " "));
         
         // Get Data
         // TODO: Only call for all items once at start and just work from the 'allItems' list afterward
@@ -235,17 +243,20 @@
                 // Populate Main List
                 allItems = JSON.parse(data).item;
 
+                // // Create Refresh button
+                // $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="openSelectionMenu(\''+senderId+'\');">Refresh</button></li>');
+
                 // Create Back button
                 $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="cancelEquipmentSelection();">Cancel Selection</button></li>');
 
                 // Create Clear button
-                $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="clearEquipmentSelection(\''+sender.id+'\');">Clear Selection</button></li>');
+                $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="clearEquipmentSelection(\''+senderId+'\');">Clear Selection</button></li>');
 
                 // Create HTML options
                 var tick = 0;
                 for(item of allItems) {
                     // Only load correct type
-                    if(item.type == sender.id) {
+                    if(item.type == senderId) {
                         // Build HTML
                         var html = '<li>';
                         if(item.name.length > 80) {
@@ -258,7 +269,7 @@
                         } else {
                             html += '<p>'+item.desc+'</p>';
                         }
-                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+sender.id+'\','+tick+');">Select</button>';
+                        html += '<button type="button" class="main_List_Button" onclick="swapData(\''+senderId+'\','+tick+');">Select</button>';
                         html += '</li>';
 
                         // Send it out
@@ -481,6 +492,9 @@
                 // Switch Title
                 $("#main_LeftInstructionHeader").text(extrasMenuHeader);
 
+                // Open list of extra items
+                openExtrasSelectionMenu();
+
                 break;
 
             default:
@@ -618,6 +632,107 @@
     function finishMenu_Reset() {
         // Reload the page. Work smarter, not harder.
         location.reload();
+    }
+
+    // Add an Extra item to the extra list
+    function addExtrasItem() {
+        // Get data from forum
+        itemName = $("#itemName").val();
+        itemPrice = $("#itemPrice").val();
+        itemStore = $("#itemStore").val();
+        itemDesc = $("#itemDesc").val();
+        itemLink = $("#itemLink").val();
+
+        // Build Item
+        var newItem = {name:itemName, price:itemPrice, store:itemStore, desc:itemDesc, type:"ExtraItem", image:"None", link:itemLink};
+
+        // Add to Equipment List
+        equipment.push(newItem);
+
+        // Add to Total Price
+        totalPrice = (parseFloat($("#totalPriceDisplay").text())+parseFloat(newItem.price)).toFixed(2);
+        $("#totalPriceDisplay").text(totalPrice);
+
+        // Empty the forum
+        $("#itemName").val("");
+        $("#itemPrice").val(0);
+        $("#itemStore").val("");
+        $("#itemDesc").val("");
+        $("#itemLink").val("");
+
+        // Re-Open the list
+        openExtrasSelectionMenu();
+    }
+
+    function deleteExtrasItem(itemName) {
+        // Delete the item from equipment
+        var tick = 0;
+        for(item of equipment) {
+            if("extraItem_"+item.name.substr(0,5) == itemName) {
+                // Subtract from Total Price
+                totalPrice = (parseFloat($("#totalPriceDisplay").text())-parseFloat(item.price)).toFixed(2);
+                $("#totalPriceDisplay").text(totalPrice);
+
+                // Remove from list
+                equipment.splice(tick, 1);
+            }
+            tick += 1;
+        }
+
+        // Delete from the visual list
+        openExtrasSelectionMenu();
+    }
+
+    // Opens the selection menu but configured for showing extra items
+    function openExtrasSelectionMenu() {
+        // Clean List
+        $("#equipmentList").empty();
+
+        // Set up senderId
+        senderId = "ExtraItem";
+
+        // Set title
+        $("#selectSlotTitle").text("Current Extras");
+
+        // Create Refresh button
+        $("#equipmentList").append('<li class="main_Cancel_ListItem"><button type="button" class="main_List_Header main_CancelButton" onclick="openExtrasSelectionMenu();">Refresh</button></li>');
+
+        // Create HTML options
+        var tick = 0;
+        var areExtras = false;
+        for(item of equipment) {
+            // Only load correct type
+            if(item.type == senderId) {
+                // Set that extras are present
+                areExtras = true;
+
+                // Build HTML
+                var html = '<li id="extraItem_'+item.name.substr(0,5)+'">';
+                if(item.name.length > 80) {
+                    html += '<p class="main_List_Header"><a href="javascript:openLinkMenu(\''+item.link+'\');" class="main_ProductLink" target="_blank">'+item.name.substring(0,80)+'...</a> | $'+item.price+'</p>';
+                } else {
+                    html += '<p class="main_List_Header"><a href="javascript:openLinkMenu(\''+item.link+'\');" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
+                }
+                if(item.desc.length > 90) {
+                    html += '<p>'+item.desc.substring(0,90)+'...</p>';
+                } else {
+                    html += '<p>'+item.desc+'</p>';
+                }
+                html += '<button type="button" class="main_List_Button" onclick="deleteExtrasItem(\'extraItem_'+item.name.substr(0,5)+'\');">Delete</button>';
+                html += '</li>';
+
+                // Send it out
+                $("#equipmentList").append(html);
+            }
+
+            // Iterate
+            tick += 1;
+        }
+
+        // Place bumper if no Extras
+        if(!areExtras) {
+            $("#equipmentList").append('<li><p><b>No Extras added. You can add some on the left.</b></p></li>');
+        }
     }
 
     // Runs the startup
