@@ -1,0 +1,11 @@
+Other
+Helmet
+Mask
+Goggle
+Scarf
+Shirt
+Vest
+Belt
+Glove
+Pant
+Boot

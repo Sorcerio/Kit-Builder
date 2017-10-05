@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="author" content="Brody.MC Media">
-    <meta name="description" content="Welcome to the Brody.MC Media Kit Builder. Here you can build a kit for your next airsoft or paintball game?">
-    <meta name="tags" content="TO-DO">
+    <meta name="description" content="Welcome to the Brody.MC Media Kit Builder. Here you can build a kit for your next airsoft or paintball game using parts from various popular retailers!">
+    <meta name="tags" content="airsoft kit builder brody.mc media brody paintball customization custom parts kit configuration build your own">
     <link rel="icon" href="images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
     <link rel="stylesheet" type="text/css" href="assets/w3.css">
@@ -21,7 +21,7 @@
             <a href="javascript:switchToolbarSelector('primary_menu');"><li id="primary_menu">Primary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('secondary_menu');"><li id="secondary_menu">Secondary Weapon</li></a>
             <a href="javascript:switchToolbarSelector('extras_menu');"><li id="extras_menu">Extras</li></a>
-            <a href="javascript:openFinishMenu();"><li id="finish_menu">Finish</li></a> <!-- TODO: Make finish page w/ Store Totals and Save button -->
+            <a href="javascript:openFinishMenu();"><li id="finish_menu">Finish</li></a>
         </ul>
     </div>
 
@@ -59,14 +59,15 @@
                     <!-- Buttons End -->
                 </div>
                 <div id="primaryMenu">
-                    <img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image" style="transform: translate(0%,-25%);">
+                    <h1>Primaries Coming Soon!</h1>
+                    <!--<img src="images/backgrounds/backgroundM4A1.png" alt="Background Soldier" class="main_Image" style="transform: translate(0%,-25%);">
 
-                    <!-- Buttons Start -->
+                    <!-- Buttons Start --
                     <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'weaponTypeMenuFull')" id="WeaponTypeMenu" style="left: 3%; top: 0%;" data-menustatus="closed" data-name="WEPN">WEPN</button>
                     <div id="weaponTypeMenuFull" style="display: none;">
-                        <!-- TODO: Implement switching Weapon type. -->
-                        <!-- TODO: Implement selecting pre-built models -->
-                        <!-- TODO: Increase customization into the gear box and beyond -->
+                        <!-- TODO: Implement switching Weapon type. 
+                        <!-- TODO: Implement selecting pre-built models 
+                        <!-- TODO: Increase customization into the gear box and beyond 
                         <button type="button" class="main_SelectorButton" onclick="#" id="selectM4" style="left: 10.5%; top: 0%;">M4</button>
                         <button type="button" class="main_SelectorButton" onclick="#" id="selectAK" style="left: 18%; top: 0%;">AK</button>
                         <button type="button" class="main_SelectorButton" onclick="#" id="selectPistol" style="left: 25.5%; top: 0%;">PSTL</button>
@@ -95,7 +96,7 @@
                     <!-- Buttons End -->
                 </div>
                 <div id="secondaryMenu">
-                    <h1>Secondary Weapons are not implemented yet!</h1>
+                    <h1>Secondaries Coming Soon!</h1>
                 </div>
                 <div id="extrasMenu">
                     <forum class="main_ExtraItemForum">
@@ -155,9 +156,10 @@
                     <!-- Populated by script -->
                 </div>
                 <div class="modal_RightPanel" style="margin-top:15px;">
-                    <button type="button" class="modal_MenuButton" onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
-                    <button type="button" class="modal_MenuButton" onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button>
-                    <button type="button" class="modal_MenuButton" onclick="finishMenu_Reset();" id="loadFromCsvBtn">Reset Loadout</button> 
+                    <button type="button" class="modal_MenuButton" title="Saves your current loadout to a CSV on your computer." onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
+                    <button type="button" class="modal_MenuButton" title="Loads a loadout from a CSV file on your computer." onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button>
+                    <button type="button" class="modal_MenuButton" title="Resets the loadout." onclick="finishMenu_Reset();" id="resetLoadoutBtn">Reset Loadout</button> 
+                    <button type="button" class="modal_MenuButton" title="Opens all links in new tabs." onclick="#" id="openAllLinksBtn">Open All Links</button> 
                 </div>
             </div>
         </div>
@@ -179,15 +181,9 @@
     </div>
     
     <!-- Footer -->
-    <div class="footer">
-        <ul class="footer_List">
-            <li><p>Copyright under 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License' to Brody.MC Media and all personal aliases.</p></li>
-            <!-- <li><a href="LICENSE" title="Opens in a new tab." target="_blank"><p>View License.</p></a></li> -->
-            <li><a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Opens in a new tab." target="_blank"><p>View License.</p></a>.</li>
-            <li><a href="credits.php" title="Opens in a new tab." target="_blank"><p>View Credits.</p></a></li>
-            <li><a href="https://github.com/maximombro/Kit-Builder" title="Opens in a new tab." target="_blank"><p>View on Github.</p></a></li>
-        </ul>
-    </div>  
+    <?php
+        include("assets/footer.php");
+    ?>
 </body>
 <script type="text/javascript" src="actions/mainController.js"></script>
 </html>
