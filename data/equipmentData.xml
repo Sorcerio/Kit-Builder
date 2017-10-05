@@ -6230,7 +6230,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-511-74350.jpg</image>
         <link>https://www.evike.com/products/36362/</link>
     </item>
@@ -6270,7 +6270,7 @@ Example XML:
         <price>269.99</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/74070-169.jpg</image>
         <link>https://www.evike.com/products/70498/</link>
     </item>
@@ -6370,7 +6370,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_ACU_lg.jpg</image>
         <link>https://www.evike.com/products/34034/</link>
     </item>
@@ -6380,7 +6380,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_BK_lg.jpg</image>
         <link>https://www.evike.com/products/34044/</link>
     </item>
@@ -6390,7 +6390,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_City_lg.jpg</image>
         <link>https://www.evike.com/products/34069/</link>
     </item>
@@ -6400,7 +6400,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_Khaki_lg.jpg</image>
         <link>https://www.evike.com/products/34079/</link>
     </item>
@@ -6410,7 +6410,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_OD_lg.jpg</image>
         <link>https://www.evike.com/products/34074/</link>
     </item>
@@ -6420,7 +6420,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_TS_lg.jpg</image>
         <link>https://www.evike.com/products/34064/</link>
     </item>
@@ -6430,7 +6430,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65% Polyester / 35% Cotton Twill Blend Fabric</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_Pants_WD_lg.jpg</image>
         <link>https://www.evike.com/products/34039/</link>
     </item>
@@ -6440,7 +6440,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-cd-608-bk.jpg</image>
         <link>https://www.evike.com/products/36593/</link>
     </item>
@@ -6450,7 +6450,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-cd-608-k.jpg</image>
         <link>https://www.evike.com/products/36584/</link>
     </item>
@@ -6480,7 +6480,7 @@ Example XML:
         <price>172.20</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/crye-70969.jpg</image>
         <link>https://www.evike.com/products/70969/</link>
     </item>
@@ -6490,7 +6490,7 @@ Example XML:
         <price>202.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-CPE-00.jpg</image>
         <link>https://www.evike.com/products/60716/</link>
     </item>
@@ -6500,7 +6500,7 @@ Example XML:
         <price>202.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-CPE-45.jpg</image>
         <link>https://www.evike.com/products/58122/</link>
     </item>
@@ -6510,7 +6510,7 @@ Example XML:
         <price>202.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-CPE-02.jpg</image>
         <link>https://www.evike.com/products/58112/</link>
     </item>
@@ -6520,7 +6520,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-CPE-90.jpg</image>
         <link>https://www.evike.com/products/58117/</link>
     </item>
@@ -6530,7 +6530,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-CPE-60.jpg</image>
         <link>https://www.evike.com/products/58127/</link>
     </item>
@@ -6570,7 +6570,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-FPE-02.jpg</image>
         <link>https://www.evike.com/products/58138/</link>
     </item>
@@ -6580,7 +6580,7 @@ Example XML:
         <price>142.30</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/APR-FPE-90.jpg</image>
         <link>https://www.evike.com/products/58143/</link>
     </item>
@@ -6750,7 +6750,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081a-phc.jpg</image>
         <link>https://www.evike.com/products/46874/</link>
     </item>
@@ -6760,7 +6760,7 @@ Example XML:
         <price>84.95</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081-sr.jpg</image>
         <link>https://www.evike.com/products/59310/</link>
     </item>
@@ -6770,7 +6770,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/LBX-0081a-gy.jpg</image>
         <link>https://www.evike.com/products/47716/</link>
     </item>
@@ -6820,7 +6820,7 @@ Example XML:
         <price>84.95</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081a-it.jpg</image>
         <link>https://www.evike.com/products/53021/</link>
     </item>
@@ -6830,7 +6830,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081a-rg.jpg</image>
         <link>https://www.evike.com/products/50492/</link>
     </item>
@@ -6840,7 +6840,7 @@ Example XML:
         <price>84.95</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081a.jpg</image>
         <link>https://www.evike.com/products/50483/</link>
     </item>
@@ -6880,7 +6880,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/LBX-74738-74743.jpg</image>
         <link>https://www.evike.com/products/74739/</link>
     </item>
@@ -6900,7 +6900,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 65/35 Poly Cotton Ripstop</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-76003.jpg</image>
         <link>https://www.evike.com/products/76003/</link>
     </item>
@@ -6950,7 +6950,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> Medium</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/bdu-1913.jpg</image>
         <link>https://www.evike.com/products/44976/</link>
     </item>
@@ -7340,7 +7340,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> 3 Color Desert</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/bdu-pants-de.jpg</image>
         <link>https://www.evike.com/products/34057/</link>
     </item>
@@ -7360,7 +7360,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Rothco's BDU pants are made with comfortable, durable poly/cotton twill with a reinforced seat and knees, designed for military and public safety personnel for a long lasting wear. Rothcos BDU pants include 6 utility pockets (2 button down back pockets, 2 front slash pockets and 2 cargo pockets). Additional features include adjustable waist tabs for a secure fit, button fly, and drawstring cuffs.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/9620.jpg</image>
         <link>https://www.evike.com/products/51465/</link>
     </item>
@@ -7390,7 +7390,7 @@ Example XML:
         <price>65.00</price>
         <store>Evike</store>
         <desc> Medium</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/ebairsoft-63313-63314.jpg</image>
         <link>https://www.evike.com/products/63313/</link>
     </item>
@@ -7410,7 +7410,7 @@ Example XML:
         <price>106.95</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/71337.jpg</image>
         <link>https://www.evike.com/products/71337/</link>
     </item>
@@ -7426,11 +7426,11 @@ Example XML:
     </item>
 
     <item>
-        <name>Tru-Spec  Tactical Response Uniform Pants - Digital Desert (Size: Medium-Regular)</name>
+        <name>Tru-Spec Tactical Response Uniform Pants - Digital Desert (Size: Medium-Regular)</name>
         <price>46.95</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1293.jpg</image>
         <link>https://www.evike.com/products/62739/</link>
     </item>
@@ -7440,7 +7440,7 @@ Example XML:
         <price>46.95</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1268.jpg</image>
         <link>https://www.evike.com/products/62725/</link>
     </item>
@@ -7450,7 +7450,7 @@ Example XML:
         <price>79.95</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1321.jpg</image>
         <link>https://www.evike.com/products/62746/</link>
     </item>
@@ -7460,7 +7460,7 @@ Example XML:
         <price>64.95</price>
         <store>Evike</store>
         <desc>The best fitting, most comfortable tactical pants on the market. The original 24-7 Series Tactical Pant, designed with an engineered dimensional fit that is just right for on-duty or off-duty wear. With features like a comfortable slider waistband, deep cargo pockets that are designed to accommodate a concealed weapon and reinforced knees that are designed with special pockets for inserting pads, the pants cannot be beat for utility or comfort. These are the pants that started it all and what "The Gunny" R. Lee Ermey calls, "the best damn pair of pants I've ever owned." </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1067.jpg</image>
         <link>https://www.evike.com/products/62718/</link>
     </item>
@@ -7470,7 +7470,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Built with the many of the same features as the classic MIL-SPEC BDU but with a few added improvements. The classic BDU pant was adopted by the U.S. military as their primary combat uniform in the early 1980s and served well into the mid 2000's but by adding a YKK brass zipper and a DropN accessory/phone pocket, these pants are even better today. </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1827003.jpg</image>
         <link>https://www.evike.com/products/64807/</link>
     </item>
@@ -7480,7 +7480,7 @@ Example XML:
         <price>28.95</price>
         <store>Evike</store>
         <desc>Built with the many of the same features as the classic MIL-SPEC BDU but with a few added improvements. The classic BDU pant was adopted by the U.S. military as their primary combat uniform in the early 1980s and served well into the mid 2000's but by adding a YKK brass zipper and a DropN accessory/phone pocket, these pants are even better today. </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1829003.jpg</image>
         <link>https://www.evike.com/products/64817/</link>
     </item>
@@ -7490,7 +7490,7 @@ Example XML:
         <price>28.95</price>
         <store>Evike</store>
         <desc>Built with the many of the same features as the classic MIL-SPEC BDU but with a few added improvements. The classic BDU pant was adopted by the U.S. military as their primary combat uniform in the early 1980s and served well into the mid 2000's but by adding a YKK brass zipper and a DropN accessory/phone pocket, these pants are even better today. </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1828003.jpg</image>
         <link>https://www.evike.com/products/64812/</link>
     </item>
@@ -7500,7 +7500,7 @@ Example XML:
         <price>28.95</price>
         <store>Evike</store>
         <desc>Built with the many of the same features as the classic MIL-SPEC BDU but with a few added improvements. The classic BDU pant was adopted by the U.S. military as their primary combat uniform in the early 1980s and served well into the mid 2000's but by adding a YKK brass zipper and a DropN accessory/phone pocket, these pants are even better today. </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1830003.jpg</image>
         <link>https://www.evike.com/products/64822/</link>
     </item>
@@ -7510,7 +7510,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Built with the many of the same features as the classic MIL-SPEC BDU but with a few added improvements. The classic BDU pant was adopted by the U.S. military as their primary combat uniform in the early 1980s and served well into the mid 2000's but by adding a YKK brass zipper and a DropN accessory/phone pocket, these pants are even better today. </desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1831003.jpg</image>
         <link>https://www.evike.com/products/64827/</link>
     </item>
@@ -7520,7 +7520,7 @@ Example XML:
         <price>119.95</price>
         <store>Evike</store>
         <desc>When its wet and miserable outdoors and youre trying to stay comfortable, keeping your upper half dry is only half the battle. Designed to fit over your standard pants these 3-layer waterproof, windproof, breathable pants are better than ever. The secret is the high quality, environmentally safe Bemis seam tapes. Seam tape is the critical link in the chain of waterproof protection and Bemis is the recognized worldwide technology leader in providing thermoplastic films for a myriad of industrial applications</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/truspec-71385.jpg</image>
         <link>https://www.evike.com/products/71385/</link>
     </item>
@@ -7820,7 +7820,7 @@ Example XML:
         <price>79.95</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/TS-1266.jpg</image>
         <link>https://www.evike.com/products/60534/</link>
     </item>
@@ -7830,7 +7830,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/TS-1236.jpg</image>
         <link>https://www.evike.com/products/60518/</link>
     </item>
@@ -7840,7 +7840,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/1323.jpg</image>
         <link>https://www.evike.com/products/62754/</link>
     </item>
@@ -7900,7 +7900,7 @@ Example XML:
         <price>109.95</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/tru-spec-60547.jpg</image>
         <link>https://www.evike.com/products/60526/</link>
     </item>
@@ -7910,7 +7910,7 @@ Example XML:
         <price>109.95</price>
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/TS-1239.jpg</image>
         <link>https://www.evike.com/products/60522/</link>
     </item>
@@ -7970,7 +7970,7 @@ Example XML:
         <price>79.95</price>
         <store>Evike</store>
         <desc>Made to current U.S. military specification GL/PD 14-05 using permanent press, wrinkle resistant CL-8 50/50 CORDURA nylon cotton vat dyed rip-stop material. The next evolution of the U.S. Army combat uniform. For active duty soldiers or for an individual or organization that wants the authentic look of the real thing, TRU-SPEC is as real as it gets.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/truspec-71381.jpg</image>
         <link>https://www.evike.com/products/71381/</link>
     </item>
@@ -7980,7 +7980,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> Medium</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/BDU_RC_5755_lg.jpg</image>
         <link>https://www.evike.com/products/35035/</link>
     </item>
@@ -8040,7 +8040,7 @@ Example XML:
         <price>49.95</price>
         <store>Evike</store>
         <desc>The Valken Tactical Kilo line was created to offer a full tactical set at an affordable price. The lightweight basic design features full continuous camo patterns to seamlessly blend into your surroundings. Ripstop fabric make the Kilo line adjustable and allow easy mobility. Low profile cargo pockets and adjustable inner waist drawstrings come standard with the Kilo pants. Sublimated moisture wicking fabric make the Kilo combat shirts easily breathable.  The basic design offers customers a lower price point option, while still offering great tactical features.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-kilo-ocp.jpg</image>
         <link>https://www.evike.com/products/63063/</link>
     </item>
@@ -8050,7 +8050,7 @@ Example XML:
         <price>49.95</price>
         <store>Evike</store>
         <desc>The Valken Tactical Kilo line was created to offer a full tactical set at an affordable price. The lightweight basic design features full continuous camo patterns to seamlessly blend into your surroundings. Ripstop fabric make the Kilo line adjustable and allow easy mobility. Low profile cargo pockets and adjustable inner waist drawstrings come standard with the Kilo pants. Sublimated moisture wicking fabric make the Kilo combat shirts easily breathable.  The basic design offers customers a lower price point option, while still offering great tactical features.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-kilo-ts.jpg</image>
         <link>https://www.evike.com/products/63059/</link>
     </item>
@@ -8060,7 +8060,7 @@ Example XML:
         <price>49.95</price>
         <store>Evike</store>
         <desc>The Valken Tactical Kilo line was created to offer a full tactical set at an affordable price. The lightweight basic design features full continuous camo patterns to seamlessly blend into your surroundings. Ripstop fabric make the Kilo line adjustable and allow easy mobility. Low profile cargo pockets and adjustable inner waist drawstrings come standard with the Kilo pants. Sublimated moisture wicking fabric make the Kilo combat shirts easily breathable.  The basic design offers customers a lower price point option, while still offering great tactical features.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/pants-kilo-wd.jpg</image>
         <link>https://www.evike.com/products/63054/</link>
     </item>
@@ -8100,7 +8100,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc>When disappearing into the landscape is your top priority, our Tango apparel has you covered. The durable, lightweight construction with a full-coverage camo pattern help you blend into your surroundings and help keep you protected . The padding is built in for extra durability and integrated where you need it most. Stretch areas make for easy mobility when crawling through brush, or sprinting to cover. With the big Velcro sleeve panels youll have plenty of room to show off your colors to the team whose flag you just captured.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/valk-63090.jpg</image>
         <link>https://www.evike.com/products/63089/</link>
     </item>
@@ -8110,7 +8110,7 @@ Example XML:
         <price>99.95</price>
         <store>Evike</store>
         <desc>When disappearing into the landscape is your top priority, our Tango apparel has you covered. The durable, lightweight construction with a full-coverage camo pattern help you blend into your surroundings and help keep you protected . The padding is built in for extra durability and integrated where you need it most. Stretch areas make for easy mobility when crawling through brush, or sprinting to cover. With the big Velcro sleeve panels youll have plenty of room to show off your colors to the team whose flag you just captured.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/valk-63086.jpg</image>
         <link>https://www.evike.com/products/63085/</link>
     </item>
@@ -8120,7 +8120,7 @@ Example XML:
         <price>99.95</price>
         <store>Evike</store>
         <desc>When disappearing into the landscape is your top priority, our Tango apparel has you covered. The durable, lightweight construction with a full-coverage camo pattern help you blend into your surroundings and help keep you protected . The padding is built in for extra durability and integrated where you need it most. Stretch areas make for easy mobility when crawling through brush, or sprinting to cover. With the big Velcro sleeve panels youll have plenty of room to show off your colors to the team whose flag you just captured.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/valk-63082.jpg</image>
         <link>https://www.evike.com/products/63081/</link>
     </item>
@@ -8170,7 +8170,7 @@ Example XML:
         <price>0.00</price>
         <store>Evike</store>
         <desc> NYCO ripstop</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/kj-67849.jpg</image>
         <link>https://www.evike.com/products/67849/</link>
     </item>
@@ -8230,7 +8230,7 @@ Example XML:
         <price>46.95</price>
         <store>Evike</store>
         <desc>Loosely based off the U.S. Military's ACU but goes beyond spec with dozens of durability and performance enhancements. Every SWAT, SRT and special response unit needs a quality, full featured uniform and this uniform fits the bill perfectly. All T.R.U. fabrics are manufactured in the U.S. in government approved factories and are recommended by the NTOA</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/truspec-70206.jpg</image>
         <link>https://www.evike.com/products/70206/</link>
     </item>
@@ -8270,7 +8270,7 @@ Example XML:
         <price>84.95</price>
         <store>Evike</store>
         <desc>Named after their parent company LBT(London Bridge Trading) LBX stands for London Bridge "X" as in the unknown variable. "X" representing an infinite amount of possibilities within the tactical world. Conceived as a tactical brand that would create milspec gear with modern design and versatility. Whether you're military, ex-military, weekend warrior or just an all out tactical junkie, look for LBX Tactical to offer a wide variety of products with the ability to mix and match components for endless custom load-out capabilities.</desc>
-        <type>Shirt</type>
+        <type>Pant</type>
         <image>https://www.evike.com/images/large/lbx-0081-caiman.jpg</image>
         <link>https://www.evike.com/products/54453/</link>
     </item>
@@ -10920,7 +10920,7 @@ Example XML:
         <price>99.95</price>
         <store>Evike</store>
         <desc>The LWMS can be carried alone as backpack / attached to LWMS Chest Rig to form a vest / attached to other vests via MOLLE.Cordura fabric</desc>
-        <type>Vest</type>
+        <type>Backpack</type>
         <image>https://www.evike.com/images/large/pantac-76132.jpg</image>
         <link>https://www.evike.com/products/76132/</link>
     </item>
