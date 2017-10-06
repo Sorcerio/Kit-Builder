@@ -29,8 +29,7 @@ Also, they're not in any particular order, so don't count on this being super ac
     * Data Addition Forum Page
     * Data Correction Forum Page
 * Split data files based on Gear, Primaries, Secondaries
-* Implement info bar
 * Implement Primaries
-    * ???
+    * Probably a lot
 * Implement Secondaries
-    * ???
+    * Probably a lot

@@ -236,6 +236,25 @@ body {
     border: none;
 }
 
+/* Ad Bar */
+.adBar {
+    width: 100%;
+}
+
+.adBar_left {
+    float: left;
+    width: 50%;
+    max-height: 10%;
+    background-color: yellow;
+}
+
+.adBar_right {
+    float: right;
+    width: 50%;
+    max-height: 10%;
+    background-color: yellow;
+}
+
 /* Main Contents */
 .main_LeftPanel {
     /* background-color: red;  */

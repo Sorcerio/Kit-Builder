@@ -25,6 +25,16 @@
         </ul>
     </div>
 
+    <!-- Ad Bar -->
+    <!-- <div class="toolBar_otherSpacer adBar">
+        <div class="adBar_left">
+            <h1>Here's a fucking ad bar!</h1>
+        </div>
+        <div class="adBar_right">
+            <h1>Here's a fucking ad bar!</h1>
+        </div>
+    </div> -->
+
     <!-- Page Contents -->
     <div class="toolBar_otherSpacer">
         <!-- Left Panel | Spot Choice -->
@@ -32,7 +42,7 @@
             <h1 class="main_Header" id="main_LeftInstructionHeader">Select Location</h1>
             <div class="main_ImageContainer" id="mainNodeSelectionContainer">
                 <div id="equipmentMenu">
-                    <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image">
+                    <img src="images/backgrounds/backgroundSoldier.png" alt="Background Soldier" class="main_Image"> 
 
                     <!-- Buttons Start -->
                     <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
