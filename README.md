@@ -21,3 +21,16 @@ At some point, if this gets enough use, I'll actually fill out the wiki with top
 * Not breaking everything.
 * Doing drugs.
 * The installation instructions.
+
+# To-Do:
+Stuff that's planned and will probably (maybe) get added at some point.
+Also, they're not in any particular order, so don't count on this being super accurate.
+* Community data editions
+    * Data Addition Forum Page
+    * Data Correction Forum Page
+* Split data files based on Gear, Primaries, Secondaries
+* Implement info bar
+* Implement Primaries
+    * ???
+* Implement Secondaries
+    * ???
