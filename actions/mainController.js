@@ -220,9 +220,9 @@ function expandMenu(node, menuId) {
 function radialMenuAnimate(menuId, direction) {
     // Variables
     var pos = 1;
-    var offsetX = 55;
-    var offsetY = 55;
-    var unit = "px";
+    var offsetX = 110;
+    var offsetY = 110;
+    var unit = "%";
 
     // Loop through
     for(child of $("#"+menuId).children()) {

@@ -68,7 +68,7 @@ body {
 /* Tool Tips | Thanks to Chris Bracco */
 [data-tooltip] {
   position: relative;
-  z-index: 2;
+  z-index: 9;
   cursor: pointer;
 }
 
@@ -79,6 +79,7 @@ body {
   filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   pointer-events: none;
+  z-index: 9;
 }
 
 [data-tooltip]:before {
@@ -100,6 +101,7 @@ body {
   font-size: 14px;
   line-height: 1.2;
   border: 1px solid white;
+  z-index: 9;
 }
 
 /* [data-tooltip]:after {
@@ -369,6 +371,7 @@ body {
     height: 7%;
     padding: 1px;
     font-size: 1vw;
+    z-index: 3;
     /* Location is set directly in the HTML since there's a lot */
 }
 
