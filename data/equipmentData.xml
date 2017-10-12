@@ -26,7 +26,7 @@ Example XML:
 <equipment>
     <!-- Evike Equipment -->
     <item>
-        <name>(EPIC DEAL) MICH 2001 Fiberglass Airsoft Helmet - Watertransfer / Arid Camo</name>
+        <name>MICH 2001 Fiberglass Airsoft Helmet - Watertransfer / Arid Camo</name>
         <price>50.00</price>
         <store>Evike</store>
         <desc>The MICH helmet is the standard for United States military personnel and SWAT units all around the country making it one of the most popular tactical helmets in the world. The 2001 style MICH features no ear covers allowing for a wide range of ear protection / communication headsets to be used and no visor effectively increasing the user's field of view.</desc>
@@ -1031,7 +1031,7 @@ Example XML:
         <store>Evike</store>
         <desc>Couldn't get the description. Check the link!</desc>
         <type>Helmet</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/25121/</link>
     </item>
 
@@ -5191,7 +5191,7 @@ Example XML:
         <store>Evike</store>
         <desc>A must have for Airsoft gaming. The Neck Gaiter provides great, comfortable protection for the lower half of the face. The are used amongst many Airsoft players to protect the face from the elements.</desc>
         <type>Scarf</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/34554/</link>
     </item>
 
@@ -5201,7 +5201,7 @@ Example XML:
         <store>Evike</store>
         <desc>A must have for Airsoft gaming. The Neck Gaiter provides great, comfortable protection for the lower half of the face. The are used amongst many Airsoft players to protect the face from the elements.</desc>
         <type>Scarf</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/25673/</link>
     </item>
 
@@ -6111,7 +6111,7 @@ Example XML:
         <store>Evike</store>
         <desc>Matrix Tactical Combat Neck Roll.</desc>
         <type>Scarf</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/24340/</link>
     </item>
 
@@ -8261,7 +8261,7 @@ Example XML:
         <store>Evike</store>
         <desc> 55% Polyester / 45% Cotton Twill Blend Fabric</desc>
         <type>Shirt</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/34099/</link>
     </item>
 
@@ -9771,7 +9771,7 @@ Example XML:
         <store>Evike</store>
         <desc> </desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/34587/</link>
     </item>
 
@@ -9791,7 +9791,7 @@ Example XML:
         <store>Evike</store>
         <desc>HK MP SMG Catch and Sling in Black color. Suitable for MP7 or MP5 series. Magazine pouch for storing two MP7 or MP5 magazines.</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/33367/</link>
     </item>
 
@@ -10041,7 +10041,7 @@ Example XML:
         <store>Evike</store>
         <desc>Looking for something light and high speed? Something simple that holds all your magazines with you in battle? That looks good at the same time?</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/29655/</link>
     </item>
 
@@ -10051,7 +10051,7 @@ Example XML:
         <store>Evike</store>
         <desc>Looking for something light and high speed? Something simple that holds all your magazines with you in battle? That looks good at the same time?</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/29653/</link>
     </item>
 
@@ -10881,7 +10881,7 @@ Example XML:
         <store>Evike</store>
         <desc>    * Features most versatile webbing (m.o.l.l.e.) all over entire vest.</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/32341/</link>
     </item>
 
@@ -11611,7 +11611,7 @@ Example XML:
         <store>Evike</store>
         <desc>    * Features most versatile webbing (m.o.l.l.e.) all over entire vest.</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/32380/</link>
     </item>
 
@@ -12531,7 +12531,7 @@ Example XML:
         <store>Evike</store>
         <desc>    * Features most versatile webbing (m.o.l.l.e.) all over entire vest.</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/32376/</link>
     </item>
 
@@ -12871,7 +12871,7 @@ Example XML:
         <store>Evike</store>
         <desc> </desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/26981/</link>
     </item>
 
@@ -12881,7 +12881,7 @@ Example XML:
         <store>Evike</store>
         <desc>Condor Outer Plate Carrier Set - XL/XXL.</desc>
         <type>Vest</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/27564/</link>
     </item>
 
@@ -13141,7 +13141,7 @@ Example XML:
         <store>Evike</store>
         <desc>This BDU Belt is made from 1-3/4" wide Mil. Spec. nylon webbing and is perfect for wear with your field BDU's, jeans or outdoor clothing.</desc>
         <type>Belt</type>
-        <image>IMAGE_ERROR</image>
+        <image>NO_IMAGE</image>
         <link>https://www.evike.com/products/24552/</link>
     </item>
 
