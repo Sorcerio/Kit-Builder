@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/mainStyle.css">
     <link rel="stylesheet" type="text/css" href="assets/w3.css">
     <script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/jquery.transit.min.js"></script>
 </header>
 <body>
     <!-- Tool Bar -->
@@ -47,10 +48,14 @@
                     <!-- Buttons Start -->
                     <button type="button" class="main_SelectorButton" onclick="expandMenu(this,'headMenuFull')" id="HeadMenu" style="left: 49%; top: 19%;" data-menustatus="closed" data-name="HEAD">HEAD</button>
                     <div id="headMenuFull" style="display: none;"> 
-                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
+                        <!-- <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 11.5%;" data-tooltip="No Selection">HELM</button>
                         <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mask" style="left: 56.5%; top: 19%;" data-tooltip="No Selection">MASK</button>
                         <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 41.5%; top: 19%;" data-tooltip="No Selection">GOGGL</button>
-                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 26.5%;" data-tooltip="No Selection">SCARF</button> -->
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Helmet" style="left: 49%; top: 19%;" data-tooltip="No Selection">HELM</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Mask" style="left: 49%; top: 19%;" data-tooltip="No Selection">MASK</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Goggle" style="left: 49%; top: 19%;" data-tooltip="No Selection">GOGGL</button>
+                        <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Scarf" style="left: 49%; top: 19%;" data-tooltip="No Selection">SCARF</button>
                     </div>
 
                     <button type="button" class="main_SelectorButton" onclick="openSelectionMenu(this);" id="Shirt" style="left: 65%; top: 30%;" data-tooltip="No Selection">SHIRT</button>

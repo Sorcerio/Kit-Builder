@@ -183,6 +183,7 @@ function expandMenu(node, menuId) {
     // Variables
     var displayMode = "none";
     var displayText = node.getAttribute("data-name");
+    var direction = "none";
 
     // Check which mode the menu is in
     if(node.getAttribute("data-menustatus") == "closed") {
@@ -190,9 +191,15 @@ function expandMenu(node, menuId) {
         displayMode = "block";
         displayText = "CLOSE";
         $("#"+node.id).attr("data-menustatus", "open");
+
+        // Set Animation
+        direction = "+=";
     } else {
         // Menu is currently open
         $("#"+node.id).attr("data-menustatus", "closed");
+
+        // Set Animation
+        direction = "-=";
     }
 
     // Set menu to visible
@@ -200,6 +207,103 @@ function expandMenu(node, menuId) {
 
     // Set Text
     $("#"+node.id).text(displayText);
+
+    // Animate
+    radialMenuAnimate(menuId, direction);
+}
+
+// Controls the animating of the radial menus
+// Positions start at the Top Left at 0 and rotate clockwise
+// Map: 5 1 6
+//      4 * 2
+//      8 3 7
+function radialMenuAnimate(menuId, direction) {
+    // Variables
+    var pos = 1;
+    var offsetX = 55;
+    var offsetY = 55;
+    var unit = "px";
+
+    // Loop through
+    for(child of $("#"+menuId).children()) {
+        // Check where to send it
+        switch(pos) {
+            case 1:
+                // Build offsets
+                var offY = direction+String(offsetY*-1)+unit;
+
+                // Animate it
+                $(child).transition({y:offY});
+                break;
+
+            case 2:
+                // Build offsets
+                var offX = direction+String(offsetX)+unit;
+
+                // Animate it
+                $(child).transition({x:offX});
+                break;
+
+            case 3:
+                // Build offsets
+                var offY = direction+String(offsetY)+unit;
+
+                // Animate it
+                $(child).transition({y:offY});
+                break;
+
+            case 4:
+                // Build offsets
+                var offX = direction+String(offsetX*-1)+unit;
+
+                // Animate it
+                $(child).transition({x:offX});
+                break;
+
+            case 5:
+                // Build offsets
+                var offX = direction+String(offsetX*-1)+unit;
+                var offY = direction+String(offsetY*-1)+unit;
+
+                // Animate it
+                $(child).transition({x:offX,y:offY});
+                break;
+
+            case 6:
+                // Build offsets
+                var offX = direction+String(offsetX)+unit;
+                var offY = direction+String(offsetY*-1)+unit;
+
+                // Animate it
+                $(child).transition({x:offX,y:offY});
+                break;
+
+            case 7:
+                // Build offsets
+                var offX = direction+String(offsetX)+unit;
+                var offY = direction+String(offsetY)+unit;
+
+                // Animate it
+                $(child).transition({x:offX,y:offY});
+                break;
+            
+            case 8:
+                // Build offsets
+                var offX = direction+String(offsetX*-1)+unit;
+                var offY = direction+String(offsetY)+unit;
+
+                // Animate it
+                $(child).transition({x:offX,y:offY});
+                break;
+
+            default:
+                console.log("Max Cases reached.");
+                break;
+        }
+        
+        // Iterate
+        pos += 1;
+    }
 }
 
 // Switches between the various toolbar menus.
