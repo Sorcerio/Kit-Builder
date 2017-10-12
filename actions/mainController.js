@@ -450,9 +450,33 @@ function addExtrasItem() {
     itemStore = $("#itemStore").val();
     itemDesc = $("#itemDesc").val();
     itemLink = $("#itemLink").val();
+    addToDatabase = $("input[name=submitToUserData]:checked").val();
 
     // Build Item
     var newItem = {name:itemName, price:itemPrice, store:itemStore, desc:itemDesc, type:"ExtraItem", image:"None", link:itemLink};
+
+    // Check if we should send to database
+    if(addToDatabase == "yes") {
+        // We should add to the database
+        // Package the Data into a JSON
+        var newDataPackage = JSON.stringify(newItem);
+
+        // Submit with PHP
+        $.get("actions/addNewEquipmentData.php?data="+newDataPackage, function(data, status){
+            if(status === "success") {
+                if(data == "Data_Added") {
+                    // Log Success
+                    console.log("Data added succesfully.");
+                } else {
+                    // Log Normal Failure
+                    console.log("Unable to submit data because of regular failure (Failure inside the PHP program).");
+                }
+            } else {
+                // Log SUPER Failure
+                console.log("Unable to submit data because of SUPER FAILURE (PHP file couldn't be found).");
+            }
+        });
+    } 
 
     // Add to Equipment List
     equipment.push(newItem);

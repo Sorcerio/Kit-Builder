@@ -132,11 +132,21 @@
                             <h4>Item Link</h4>
                             <p>The weblink to your item.</p>
                             <input type="text" name="itemLink" id="itemLink">
+
+                            <h4>Submit to User Data</h4>
+                            <p>If you want to submit to our database. <b>*</b></p>
+                            <div class="extraForumRadioButtons">
+                                <input class="extraForumRadioButton" type="radio" name="submitToUserData" value="yes">Yes<br>
+                                <input class="extraForumRadioButton" type="radio" name="submitToUserData" value="no" checked>No<br>
+                            </div>
                         </div>
 
                         <!-- Submit Button -->
                         <button type="button" class="" onclick="addExtrasItem();" id="extras_AddItem">Add New Item</button>
                     </forum>
+
+                    <!-- Information -->
+                    <p id="submitToUserDataDisclaimer">* By submitting data to this site you are confirming that you are submitting data that is public domain or you are allowed to and are granting this site the ability to use any submitted data. You are allowing the data to be used freely on this site. We promise <i>the operators of this site</i> will not share any data submitted with other sites.</p>
                 </div>
             </div>
         </div>

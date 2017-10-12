@@ -1,6 +1,5 @@
 // Runs right when the page starts
 function onStartup() {
-
     // Pupulates the selector
     getValidItemTypes();
 }
@@ -49,7 +48,7 @@ function submitNewData() {
     // Pack up data
     var newData = {name:itemName, price:itemPrice, store:itemStore, desc:itemDesc, type:itemType, image:itemImage, link:itemLink, submitter:userName};
     var newDataPackage = JSON.stringify(newData);
-    console.log(newDataPackage);
+    // console.log(newDataPackage);
     
     // Submit with PHP
     $.get("actions/addNewEquipmentData.php?data="+newDataPackage, function(data, status){

@@ -438,4 +438,8 @@ body {
     cursor: pointer;
 }
 
+.main_ExtraItemForum .inputs .extraForumRadioButtons .extraForumRadioButton {
+    width: 5%;
+}
+
 /* TODO: Add animations to Node Menus appearing */
