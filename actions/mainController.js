@@ -538,15 +538,20 @@ function removeItemInModal(name) {
 
 // Saves the current 'equipment' list to a CSV file for download
 function finishMenu_SaveCSV() {
-    // Prepare the File Name
-    var fileName = "Kit_"+String(Date.now())+"_"+String(equipment.length);
-    console.log(fileName);
+    // Check if Equipment is empty
+    if(equipment.length > 0) {
+        // Prepare the File Name
+        var fileName = "Kit_"+String(Date.now())+"_"+String(equipment.length);
+        console.log(fileName);
 
-    // Package the Equipment list
-    var newDataPackage = JSON.stringify(equipment);
+        // Package the Equipment list
+        var newDataPackage = JSON.stringify(equipment);
 
-    // Open download page
-    window.open("actions/saveKitDataToCSV.php?data="+newDataPackage+"&file="+fileName, "_blank");
+        // Open download page
+        window.open("actions/saveKitDataToCSV.php?data="+newDataPackage+"&file="+fileName, "_blank");
+    } else {
+        alert("You have no equipment selected.");
+    }
 }
 
 // Loads a set of data into the 'equipment' list
@@ -563,10 +568,15 @@ function finishMenu_Reset() {
 
 // Opens all the links in the current cart
 function finishMenu_OpenAllLinks() {
-    // Open them all in new tabs
-    for(var item of equipment) {
-        console.log(item.link);
-        window.open(item.link,'_blank');
+    // Check if Equipment is empty
+    if(equipment.length > 0) {
+        // Open them all in new tabs
+        for(var item of equipment) {
+            console.log(item.link);
+            window.open(item.link,'_blank');
+        }
+    } else {
+        alert("You have no equipment selected.");
     }
 }
 
