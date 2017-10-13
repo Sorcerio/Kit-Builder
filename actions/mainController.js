@@ -28,7 +28,7 @@ function onStartUp() {
 
 // Opens the selection menu for the correct item
 function openSelectionMenu(sender) {
-    console.log(sender);
+    // console.log(sender);
 
     // Extract Sender Id
     senderId = undefined;
@@ -77,7 +77,7 @@ function openSelectionMenu(sender) {
                     } else {
                         html += '<p>'+item.desc+'</p>';
                     }
-                    html += '<button type="button" class="main_List_Button" onclick="swapData(\''+senderId+'\','+tick+');">Select</button>';
+                    html += '<button type="button" class="main_List_Button" onclick="swapData(\''+senderId+'\','+tick+',false);">Select</button>';
                     html += '</li>';
 
                     // Send it out
@@ -92,12 +92,18 @@ function openSelectionMenu(sender) {
 }
 
 // Adds selected item to Equipment array, removes old items, and sets tool tip of button
-function swapData(node, itemId) {
-    // console.log("Node: "+node);
-    // console.log(allItems[itemId]);
+// If the item map is being added directly, make directAdd = True
+function swapData(node, itemId, directAdd) {
+    console.log("Node: "+node);
+    console.log(allItems[itemId]);
 
     // Create item
-    var item = allItems[itemId];
+    var item;
+    if(directAdd) {
+        item = itemId;
+    } else {
+        item = allItems[itemId];
+    }
 
     // Remove old Equipment if exists
     if(equipment.length != 0) {
@@ -542,7 +548,7 @@ function finishMenu_SaveCSV() {
     if(equipment.length > 0) {
         // Prepare the File Name
         var fileName = "Kit_"+String(Date.now())+"_"+String(equipment.length);
-        console.log(fileName);
+        // console.log(fileName);
 
         // Package the Equipment list
         var newDataPackage = JSON.stringify(equipment);
@@ -554,11 +560,35 @@ function finishMenu_SaveCSV() {
     }
 }
 
-// Loads a set of data into the 'equipment' list
-function finishMenu_LoadCSV() {
-    console.log("TODO: Implement Loading");
-    alert("Load loadout has not been implemented yet. Check back soon!");
-}
+// // Loads a set of data into the 'equipment' list
+// function finishMenu_LoadCSV() {
+//     // console.log("TODO: Implement Loading");
+//     // alert("Load loadout has not been implemented yet. Check back soon!");
+
+//     var fileName = "Kit_1507915996158_2";
+
+//     // Make sure Equipment is empty
+//     if(equipment.length == 0) {
+//         // Prompt PHP CSV loader
+//         $.get("actions/loadKitDataFromCSV.php?file="+fileName, function(data, status){
+//             if(status === "success") {
+//                 // Convert the JSON
+//                 var loadedData = JSON.parse(data);
+//                 console.log(loadedData);
+
+//                 // Add Data to Equipment
+//                 for(item of loadedData) {
+//                     swapData(item.type, item, true);
+//                 }
+//             } else {
+//                 // Log Failure
+//                 console.log("Unable to load CSV File.");
+//             }
+//         });
+//     } else {
+//         alert("You already have equipment selected. Please remove all items to load a CSV.")
+//     }
+// }
 
 // Resets the equipment list to nothing
 function finishMenu_Reset() {
@@ -572,7 +602,7 @@ function finishMenu_OpenAllLinks() {
     if(equipment.length > 0) {
         // Open them all in new tabs
         for(var item of equipment) {
-            console.log(item.link);
+            // console.log(item.link);
             window.open(item.link,'_blank');
         }
     } else {

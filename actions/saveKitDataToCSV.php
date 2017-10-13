@@ -8,10 +8,6 @@
     // Get Data JSON
     $newData = json_decode($_GET['data'],true);
 
-    // print_r($newData[0]["name"]);
-    // print("<br><br>");
-    // print_r($newData[1]["name"]);
-
     // Prep status
     $status; // "Data_Saved", "Data_Not_Saved"
 
