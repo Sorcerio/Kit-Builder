@@ -214,9 +214,9 @@ function expandMenu(node, menuId) {
 
 // Controls the animating of the radial menus
 // Positions start at the Top Left at 0 and rotate clockwise
-// Map: 5 1 6
-//      4 * 2
-//      8 3 7
+// Positions: 5 1 6      Height: 1 2 3
+//            4 * 2     (Low to  4 * 5
+//            8 3 7      High)   6 7 8
 function radialMenuAnimate(menuId, direction) {
     // Variables
     var pos = 1;
@@ -234,6 +234,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:2");
                 break;
 
             case 2:
@@ -242,6 +243,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX});
+                $(child).attr("style",$(child).attr("style")+" z-index:5");
                 break;
 
             case 3:
@@ -250,6 +252,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:7");
                 break;
 
             case 4:
@@ -258,6 +261,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX});
+                $(child).attr("style",$(child).attr("style")+" z-index:4");
                 break;
 
             case 5:
@@ -267,6 +271,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX,y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:1");
                 break;
 
             case 6:
@@ -276,6 +281,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX,y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:3");
                 break;
 
             case 7:
@@ -285,6 +291,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX,y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:8");
                 break;
             
             case 8:
@@ -294,6 +301,7 @@ function radialMenuAnimate(menuId, direction) {
 
                 // Animate it
                 $(child).transition({x:offX,y:offY});
+                $(child).attr("style",$(child).attr("style")+" z-index:6");
                 break;
 
             default:
