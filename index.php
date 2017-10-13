@@ -180,7 +180,7 @@
                     <button type="button" class="modal_MenuButton" title="Saves your current loadout to a CSV on your computer." onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
                     <button type="button" class="modal_MenuButton" title="Loads a loadout from a CSV file on your computer." onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button>
                     <button type="button" class="modal_MenuButton" title="Resets the loadout." onclick="finishMenu_Reset();" id="resetLoadoutBtn">Reset Loadout</button> 
-                    <button type="button" class="modal_MenuButton" title="Opens all links in new tabs." onclick="#" id="openAllLinksBtn">Open All Links</button> 
+                    <button type="button" class="modal_MenuButton" title="Opens all links in new tabs." onclick="finishMenu_OpenAllLinks();" id="openAllLinksBtn">Open All Links</button> 
                 </div>
             </div>
         </div>

@@ -538,8 +538,15 @@ function removeItemInModal(name) {
 
 // Saves the current 'equipment' list to a CSV file for download
 function finishMenu_SaveCSV() {
-    console.log("TODO: Implement Saving");
-    alert("Save loadout has not been implemented yet. Check back soon!");
+    // Prepare the File Name
+    var fileName = "Kit_"+String(Date.now())+"_"+String(equipment.length);
+    console.log(fileName);
+
+    // Package the Equipment list
+    var newDataPackage = JSON.stringify(equipment);
+
+    // Open download page
+    window.open("actions/saveKitDataToCSV.php?data="+newDataPackage+"&file="+fileName, "_blank");
 }
 
 // Loads a set of data into the 'equipment' list
@@ -552,6 +559,15 @@ function finishMenu_LoadCSV() {
 function finishMenu_Reset() {
     // Reload the page. Work smarter, not harder.
     location.reload();
+}
+
+// Opens all the links in the current cart
+function finishMenu_OpenAllLinks() {
+    // Open them all in new tabs
+    for(var item of equipment) {
+        console.log(item.link);
+        window.open(item.link,'_blank');
+    }
 }
 
 // Add an Extra item to the extra list

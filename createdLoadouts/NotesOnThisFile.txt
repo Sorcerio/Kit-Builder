@@ -1,0 +1,3 @@
+This is mainly here so GitHub actually uploads the file because it starts empty.
+However, I should also note here that you're gonna want to clean this out eventually,
+especially if you're running this on a live server.
