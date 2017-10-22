@@ -27,6 +27,6 @@ function submitNewData() {
         }
     });
 
-    // // Close Page
-    // window.close();
+    // Close Page
+    window.close();
 }
