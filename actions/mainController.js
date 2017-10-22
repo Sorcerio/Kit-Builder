@@ -72,10 +72,10 @@ function openSelectionMenu(sender) {
                     } else {
                         html += '<p class="main_List_Header"><a href="javascript:openLinkMenu(\''+item.link+'\');" class="main_ProductLink" target="_blank">'+item.name+'</a> | $'+item.price+'</p>';
                     }
-                    if(item.desc.length > 90) {
-                        html += '<p>'+item.desc.substring(0,90)+'...</p>';
+                    if(item.desc.length > 80) {
+                        html += '<p>'+item.desc.substring(0,80)+'... | <a href="fixDataForum.php?item='+item.name+'" target="_blank" title="Opens in a new tab">Report Error</a></p>';
                     } else {
-                        html += '<p>'+item.desc+'</p>';
+                        html += '<p>'+item.desc+' | <a href="fixDataForum.php?item='+item.name+'" target="_blank" title="Opens in a new tab">Report Error</a></p>';
                     }
                     html += '<button type="button" class="main_List_Button" onclick="swapData(\''+senderId+'\','+tick+',false);">Select</button>';
                     html += '</li>';
