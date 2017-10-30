@@ -24,6 +24,9 @@ function onStartUp() {
 
     // $("#main_LeftInstructionHeader").text(extrasMenuHeader);
     // $("#mainNodeSelectionContainer").append(extrasHTML);
+
+    // Show the Disclaimer Modal
+    $("#disclaimerModal").css("display","block");
 }
 
 // Opens the selection menu for the correct item

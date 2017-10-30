@@ -25,6 +25,7 @@
             <li>Soldier Background Image, <a href="http://www.gfxmag.com">GFXMAG</a></li>
             <li>Soldier for Favicon, <a href="http://www.gfxmag.com">GFXMAG</a></li>
             <li>Button Tool Tips, <a href="https://codepen.io/cbracco/pen/qzukg">Chris Bracco</a></li>
+            <li>Java Script Cookie, <a href="https://github.com/js-cookie/js-cookie">Java Script Cookie Team</a></li>
         </ul>
     </div>
 

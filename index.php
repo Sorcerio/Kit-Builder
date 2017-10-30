@@ -200,6 +200,20 @@
             </div>
         </div>
     </div>
+
+    <!-- Link Buttons Pop-Up -->
+    <div id="disclaimerModal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container modal">
+                <!-- Close button -->
+                <span onclick="$('#disclaimerModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
+
+                <!-- Contents -->
+                <h3>Welcome to the <i>Kit Builder</i></h3>
+                <p>JUST BE COOL</p>
+            </div>
+        </div>
+    </div>
     
     <!-- Footer -->
     <?php
