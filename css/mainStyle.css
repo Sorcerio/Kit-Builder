@@ -238,6 +238,42 @@ body {
     border: none;
 }
 
+.modal_CenteredText {
+    text-align: center;
+}
+
+.modal_MenuChoiceButton {
+    position: relative;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 1px;
+    font-size: 1vw;
+    min-height: 3vw;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 5px;
+    bottom: 0px;
+    right: 0px;
+    width: 30%;
+}
+
+.modal_MenuChoiceButton.modal_ConfirmButton {
+    background-color: #25de41;
+}
+
+.modal_MenuChoiceButton.modal_CancelButton {
+    background-color: #ee4f4f;
+}
+
+.modal_MenuChoiceButton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
 /* Ad Bar */
 .adBar {
     width: 100%;

@@ -9,6 +9,7 @@ var primaryHTML = "";
 var secondaryHTML = "";
 var extrasHTML = "";
 var totalPrice = "0.00";
+var discalimerCookie = "kitBuilderDisclaimer";
 
 // Start up function
 function onStartUp() {
@@ -25,8 +26,11 @@ function onStartUp() {
     // $("#main_LeftInstructionHeader").text(extrasMenuHeader);
     // $("#mainNodeSelectionContainer").append(extrasHTML);
 
-    // Show the Disclaimer Modal
-    $("#disclaimerModal").css("display","block");
+    // Check if we should show the Disclaimer Modal
+    if(Cookies.get(discalimerCookie) == undefined) {
+        // They don't have a cookie
+        $("#disclaimerModal").css("display","block");
+    }
 }
 
 // Opens the selection menu for the correct item
@@ -736,6 +740,24 @@ function openExtrasSelectionMenu() {
     if(!areExtras) {
         $("#equipmentList").append('<li><p><b>No Extras added. You can add some on the left.</b></p></li>');
     }
+}
+
+// Gives the user a Cookie and lets them pass if they Agree to the terms
+function disclaimer_Accept() {
+    // Give that little bastard a cookie
+    Cookies.set(discalimerCookie,"It's a good boy.",{expires: 10});
+
+    // Close the Disclaimer Modal
+    $('#disclaimerModal').css('display','none');
+}
+
+// Ejects the user because they don't agree with our terms
+function disclaimer_Reject() {
+    // Close the window. They do not deserve to use our product.
+    window.close();
+
+    // If the window doesn't close, delete the page HTML because fuck you.
+    $("#mainPageBody").hide();
 }
 
 // Runs the startup

@@ -12,8 +12,9 @@
     <link rel="stylesheet" type="text/css" href="assets/w3.css">
     <script type="text/javascript" src="assets/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="assets/jquery.transit.min.js"></script>
+    <script type="text/javascript" src="assets/js.cookie.js"></script>
 </header>
-<body>
+<body id="mainPageBody">
     <!-- Tool Bar -->
     <div class="toolBar">
         <h4 class="main_Header main_Header_Price">Total Price: $<span id="totalPriceDisplay">0.00</span></h4>
@@ -205,12 +206,19 @@
     <div id="disclaimerModal" class="w3-modal">
         <div class="w3-modal-content">
             <div class="w3-container modal">
-                <!-- Close button -->
-                <span onclick="$('#disclaimerModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
-
                 <!-- Contents -->
-                <h3>Welcome to the <i>Kit Builder</i></h3>
-                <p>JUST BE COOL</p>
+                <div class="modal_CenteredText">
+                    <h3>Welcome to the <b>Airsoft Kit Builder</b></h3>
+
+                    <p>
+                        Please be sure you check out our <i>disclaimer</i> before using this tool.<br>
+                        Then select your choice on the matter.<br>
+                        The disclaimer can be found <a href="disclaimer.php" title="Opens in a new tab." target="_blank">here</a>.
+                    </p>
+                
+                    <button type="button" class="modal_MenuChoiceButton modal_ConfirmButton" onclick="disclaimer_Accept();" id="confirmDisclaimerBtn">I Agree</button> 
+                    <button type="button" class="modal_MenuChoiceButton modal_CancelButton" onclick="disclaimer_Reject();" id="rejectDisclaimerBtn">I Disagree</button> 
+                </div>
             </div>
         </div>
     </div>
