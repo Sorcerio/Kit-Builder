@@ -25,6 +25,8 @@
         The Kit Builder uses user input for much of its data and therefore may possess terms or phrases that some may find offensive.<br>
         The Kit Builder is moderated, however, not everything can be caught right away. We do our best remove offensive material.<br>
         As such, any user submitted content is not representative of views of Brody.MC Media, this tool's developers, or any of Brody.MC Media's branches.<br>
+        Also, we use cookies. I have to say now because some governments feel like you need that. It basically just goes: "You confirmed it!". Or don't.<br>
+        Then you just can't use the tool.<br>
         <br>
         Have fun using the tool and remember that while we are on GitHub, we do have terms of use which can be found here: <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="Opens in a new tab." target="_blank">License</a>.  
         </p>

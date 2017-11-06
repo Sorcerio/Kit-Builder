@@ -101,8 +101,8 @@ function openSelectionMenu(sender) {
 // Adds selected item to Equipment array, removes old items, and sets tool tip of button
 // If the item map is being added directly, make directAdd = True
 function swapData(node, itemId, directAdd) {
-    console.log("Node: "+node);
-    console.log(allItems[itemId]);
+    // console.log("Node: "+node);
+    // console.log(allItems[itemId]);
 
     // Create item
     var item;
@@ -553,49 +553,109 @@ function removeItemInModal(name) {
 function finishMenu_SaveCSV() {
     // Check if Equipment is empty
     if(equipment.length > 0) {
-        // Prepare the File Name
-        var fileName = "Kit_"+String(Date.now())+"_"+String(equipment.length);
-        // console.log(fileName);
+        // Close the Finish Modal
+        $('#finishButtonModal').css('display','none');
 
-        // Package the Equipment list
-        var newDataPackage = JSON.stringify(equipment);
+        // Ask for Name
+        $("#nameYourKitModal").css("display","block");
 
-        // Open download page
-        window.open("actions/saveKitDataToCSV.php?data="+newDataPackage+"&file="+fileName, "_blank");
+        // This then opens a menu where the action would be confirmed
     } else {
         alert("You have no equipment selected.");
     }
 }
 
-// // Loads a set of data into the 'equipment' list
-// function finishMenu_LoadCSV() {
-//     // console.log("TODO: Implement Loading");
-//     // alert("Load loadout has not been implemented yet. Check back soon!");
+// Confirms the current save action with a name
+function finishMenu_ConfirmSave() {
+    // Close to the old Modal
+    $('#nameYourKitModal').css('display','none');
 
-//     var fileName = "Kit_1507915996158_2";
+    // Pull the name from the thing
+    var name = $("#kitLoadoutName").val();
 
-//     // Make sure Equipment is empty
-//     if(equipment.length == 0) {
-//         // Prompt PHP CSV loader
-//         $.get("actions/loadKitDataFromCSV.php?file="+fileName, function(data, status){
-//             if(status === "success") {
-//                 // Convert the JSON
-//                 var loadedData = JSON.parse(data);
-//                 console.log(loadedData);
+    // Prepare the File Name
+    var fileName = name+"_"+String(equipment.length)+"_"+String(Date.now());
 
-//                 // Add Data to Equipment
-//                 for(item of loadedData) {
-//                     swapData(item.type, item, true);
-//                 }
-//             } else {
-//                 // Log Failure
-//                 console.log("Unable to load CSV File.");
-//             }
-//         });
-//     } else {
-//         alert("You already have equipment selected. Please remove all items to load a CSV.")
-//     }
-// }
+    // Package the Equipment list
+    var newDataPackage = JSON.stringify(equipment);
+
+    // Open download page
+    window.open("actions/saveKitDataToCSV.php?data="+newDataPackage+"&file="+fileName, "_blank");
+}
+
+// Loads a set of data into the 'equipment' list
+function finishMenu_LoadCSV() {
+    // Close the Finish Modal
+    $('#finishButtonModal').css('display','none');
+
+    // Make sure Equipment is empty
+    if(equipment.length == 0) {
+        // Clear the Modal List
+        $("#selectLoadoutList").empty();
+
+        // Get the file names
+        $.get("actions/getLoadoutsFromFile.php", function(data, status){
+            if(status === "success") {
+                // Convert the JSON
+                var loadedData = JSON.parse(data);
+                // console.log(loadedData);
+
+                // Populate the Load Choice Modal's list
+                for(item of loadedData) {
+                    // Split the name
+                    var splitText = item.slice(0,-4).split("_");
+                    // console.log(splitText);
+
+                    // Prepare HTML
+                    var html = '<li>';
+                    html += '<span class="leftPanel">';
+                    html += '<b>Name:</b> '+splitText[0]+' <b>| Total Items:</b> '+splitText[1]+' <b>| Id:</b> '+splitText[2];
+                    html += '</span>';
+                    html += '<span class="rightPanel">';
+                    html += '<button type="button" id="kitLoadoutSubmit" onclick="finishMenu_ConfirmLoad(\''+item.slice(0,-4)+'\');">Select</button>';
+                    html += '</span>';
+                    html += '</li>';
+
+                    // Deploy the HTML
+                    $("#selectLoadoutList").append(html);
+                }
+
+                // Display the Load Choice Modal
+                $("#selectLoadoutModal").css("display","block");
+            } else {
+                // Log Failure
+                console.log("Unable to load CSV File.");
+            }
+        });
+
+        // // This then opens a menu where the action would be confirmed
+    } else {
+        alert("You already have equipment selected. Please remove all items to load a CSV.")
+    }
+}
+
+// Confirms the current load action with a name
+function finishMenu_ConfirmLoad(fileName) {    
+    // Prompt PHP CSV loader
+    $.get("actions/loadKitDataFromCSV.php?file="+fileName, function(data, status){
+        if(status === "success") {
+            // Convert the JSON
+            var loadedData = JSON.parse(data);
+            // console.log(loadedData);
+
+            // Add Data to Equipment
+            for(item of loadedData) {
+                swapData(item.type, item, true);
+            }
+        } else {
+            // Log Failure
+            console.log("Unable to load CSV File.");
+        }
+    });
+
+    // Close the Modal
+    $('#selectLoadoutModal').css('display','none');
+}
 
 // Resets the equipment list to nothing
 function finishMenu_Reset() {

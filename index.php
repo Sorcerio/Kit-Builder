@@ -179,7 +179,7 @@
                 </div>
                 <div class="modal_RightPanel" style="margin-top:15px;">
                     <button type="button" class="modal_MenuButton" title="Saves your current loadout to a CSV on your computer." onclick="finishMenu_SaveCSV();" id="saveToCsvBtn">Save Your Loadout</button>
-                    <!-- <button type="button" class="modal_MenuButton" title="Loads a loadout from a CSV file on your computer." onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button> -->
+                    <button type="button" class="modal_MenuButton" title="Loads a loadout from a CSV file on your computer." onclick="finishMenu_LoadCSV();" id="loadFromCsvBtn">Load a Loadout</button> 
                     <button type="button" class="modal_MenuButton" title="Resets the loadout." onclick="finishMenu_Reset();" id="resetLoadoutBtn">Reset Loadout</button> 
                     <button type="button" class="modal_MenuButton" title="Opens all links in new tabs." onclick="finishMenu_OpenAllLinks();" id="openAllLinksBtn">Open All Links</button> 
                 </div>
@@ -219,6 +219,37 @@
                     <button type="button" class="modal_MenuChoiceButton modal_ConfirmButton" onclick="disclaimer_Accept();" id="confirmDisclaimerBtn">I Agree</button> 
                     <button type="button" class="modal_MenuChoiceButton modal_CancelButton" onclick="disclaimer_Reject();" id="rejectDisclaimerBtn">I Disagree</button> 
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Select Loadout Pop-Up -->
+    <div id="selectLoadoutModal" class="w3-modal" style="z-index:9">
+        <div class="w3-modal-content">
+            <div class="w3-container modal">
+                <!-- Close button -->
+                <span onclick="$('#selectLoadoutModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
+
+                <!-- Contents -->
+                <h3>Select a Loadout</h3>
+                <ul class="modal_LoadList" id="selectLoadoutList">
+                    <!-- Populated by script -->
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 'Name Your Kit' Pop-Up -->
+    <div id="nameYourKitModal" class="w3-modal">
+        <div class="w3-modal-content">
+            <div class="w3-container modal">
+                <!-- Close button -->
+                <span onclick="$('#nameYourKitModal').css('display','none');" class="modal_closeButton w3-display-topright">&times;</span>
+
+                <!-- Contents -->
+                <h3>Name Your Loadout</h3>
+                <input type="text" name="loadoutName" id="kitLoadoutName" value="DefaultName">
+                <button type="button" id="kitLoadoutSubmit" onclick="finishMenu_ConfirmSave();">Confirm</button>
             </div>
         </div>
     </div>
