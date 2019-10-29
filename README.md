@@ -3,7 +3,7 @@ Web based tool for configuring and building a kit. Original use is geared toward
 
 # Using the Kit Builder
 ## Using my host (the easy way)
-No host is currently planned at this point.
+A preview of the tool can be found (here)[http://www.brodymcmedia.com/media/tools/KitBuilder/].
 
 ## On your computer (the hard way)
 1. Download WAMP (or your system's respective version).
